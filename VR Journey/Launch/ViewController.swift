@@ -9,12 +9,31 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet var levelSegmentedControl: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.navigationController?.navigationBar.backItem?.title = "Back"
+        
     }
-
-
+    
+    @IBAction func didChooseLevel(_ sender: Any) {
+        switch levelSegmentedControl.selectedSegmentIndex {
+        case 0:
+            //user chose basic level
+            UserDefaults.standard.set(true, forKey: "isBasicLevel")
+        case 1:
+            //user chose advanced level
+            UserDefaults.standard.set(false, forKey: "isBasicLevel")
+        default:
+            break
+        }
+    }
+    
+    @IBAction func playButtonTapped(_ sender: Any) {
+        //user pressed play
+        //performSegue(withIdentifier: "showGame", sender: nil)
+    }
+    
 }
 

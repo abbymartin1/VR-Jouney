@@ -15,6 +15,8 @@
 		B1F29789220E2E9000BBCBD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1F29787220E2E9000BBCBD6 /* LaunchScreen.storyboard */; };
 		B1F29794220E2E9000BBCBD6 /* VR_JourneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F29793220E2E9000BBCBD6 /* VR_JourneyTests.swift */; };
 		B1F2979F220E2E9000BBCBD6 /* VR_JourneyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F2979E220E2E9000BBCBD6 /* VR_JourneyUITests.swift */; };
+		B1F297B1220E3C6800BBCBD6 /* Game View Controller .swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F297B0220E3C6800BBCBD6 /* Game View Controller .swift */; };
+		B1F297B3220E3C7300BBCBD6 /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1F297B2220E3C7300BBCBD6 /* Game.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		B1F2979A220E2E9000BBCBD6 /* VR JourneyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VR JourneyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1F2979E220E2E9000BBCBD6 /* VR_JourneyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VR_JourneyUITests.swift; sourceTree = "<group>"; };
 		B1F297A0220E2E9000BBCBD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1F297B0220E3C6800BBCBD6 /* Game View Controller .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game View Controller .swift"; sourceTree = "<group>"; };
+		B1F297B2220E3C7300BBCBD6 /* Game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +103,9 @@
 		B1F2977A220E2E8E00BBCBD6 /* VR Journey */ = {
 			isa = PBXGroup;
 			children = (
-				B1F2977B220E2E8E00BBCBD6 /* AppDelegate.swift */,
-				B1F2977D220E2E8E00BBCBD6 /* ViewController.swift */,
-				B1F2977F220E2E8E00BBCBD6 /* Main.storyboard */,
+				B1F297AC220E2EB800BBCBD6 /* Launch */,
+				B1F297AF220E3BFE00BBCBD6 /* Main Game */,
 				B1F29785220E2E9000BBCBD6 /* Assets.xcassets */,
-				B1F29787220E2E9000BBCBD6 /* LaunchScreen.storyboard */,
 				B1F2978A220E2E9000BBCBD6 /* Info.plist */,
 				B1F29782220E2E8E00BBCBD6 /* VR_Journey.xcdatamodeld */,
 			);
@@ -126,6 +128,26 @@
 				B1F297A0220E2E9000BBCBD6 /* Info.plist */,
 			);
 			path = "VR JourneyUITests";
+			sourceTree = "<group>";
+		};
+		B1F297AC220E2EB800BBCBD6 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				B1F29787220E2E9000BBCBD6 /* LaunchScreen.storyboard */,
+				B1F2977D220E2E8E00BBCBD6 /* ViewController.swift */,
+				B1F2977B220E2E8E00BBCBD6 /* AppDelegate.swift */,
+				B1F2977F220E2E8E00BBCBD6 /* Main.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		B1F297AF220E3BFE00BBCBD6 /* Main Game */ = {
+			isa = PBXGroup;
+			children = (
+				B1F297B0220E3C6800BBCBD6 /* Game View Controller .swift */,
+				B1F297B2220E3C7300BBCBD6 /* Game.storyboard */,
+			);
+			path = "Main Game";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1F297B3220E3C7300BBCBD6 /* Game.storyboard in Resources */,
 				B1F29789220E2E9000BBCBD6 /* LaunchScreen.storyboard in Resources */,
 				B1F29786220E2E9000BBCBD6 /* Assets.xcassets in Resources */,
 				B1F29781220E2E8E00BBCBD6 /* Main.storyboard in Resources */,
@@ -262,6 +285,7 @@
 				B1F2977E220E2E8E00BBCBD6 /* ViewController.swift in Sources */,
 				B1F2977C220E2E8E00BBCBD6 /* AppDelegate.swift in Sources */,
 				B1F29784220E2E8E00BBCBD6 /* VR_Journey.xcdatamodeld in Sources */,
+				B1F297B1220E3C6800BBCBD6 /* Game View Controller .swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +461,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 25A6956P8C;
 				INFOPLIST_FILE = "VR Journey/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -454,6 +479,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 25A6956P8C;
 				INFOPLIST_FILE = "VR Journey/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
