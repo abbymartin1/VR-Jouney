@@ -196,6 +196,9 @@
                                 <state key="normal" title="Continue ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="XAg-Lq-h0M" kind="show" id="z7g-w2-K57"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -214,6 +217,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tom-Bs-DNN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="726" y="-190"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="Dge-wl-dYs">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="XAg-Lq-h0M" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uoy-qt-o3Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1320" y="-190"/>
         </scene>
     </scenes>
     <resources>
