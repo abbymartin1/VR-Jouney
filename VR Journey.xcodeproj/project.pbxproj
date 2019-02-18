@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B11D0CEB221AFB4F00E594B8 /* Persona Table View Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11D0CEA221AFB4F00E594B8 /* Persona Table View Cell.swift */; };
+		B169DCD4221A2CBA00E39BE3 /* Learning Objectives View Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B169DCD3221A2CBA00E39BE3 /* Learning Objectives View Controller.swift */; };
+		B169DCD6221A2CD400E39BE3 /* Game Setup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B169DCD5221A2CD400E39BE3 /* Game Setup.storyboard */; };
+		B169DCD8221A31DC00E39BE3 /* Personas View Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B169DCD7221A31DC00E39BE3 /* Personas View Controller.swift */; };
+		B169DCDA221A31E900E39BE3 /* Game Rules View Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B169DCD9221A31E900E39BE3 /* Game Rules View Controller.swift */; };
 		B1F2977C220E2E8E00BBCBD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F2977B220E2E8E00BBCBD6 /* AppDelegate.swift */; };
 		B1F2977E220E2E8E00BBCBD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F2977D220E2E8E00BBCBD6 /* ViewController.swift */; };
 		B1F29781220E2E8E00BBCBD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1F2977F220E2E8E00BBCBD6 /* Main.storyboard */; };
@@ -37,6 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B11D0CEA221AFB4F00E594B8 /* Persona Table View Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Persona Table View Cell.swift"; sourceTree = "<group>"; };
+		B169DCD3221A2CBA00E39BE3 /* Learning Objectives View Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Learning Objectives View Controller.swift"; sourceTree = "<group>"; };
+		B169DCD5221A2CD400E39BE3 /* Game Setup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Game Setup.storyboard"; sourceTree = "<group>"; };
+		B169DCD7221A31DC00E39BE3 /* Personas View Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Personas View Controller.swift"; sourceTree = "<group>"; };
+		B169DCD9221A31E900E39BE3 /* Game Rules View Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game Rules View Controller.swift"; sourceTree = "<group>"; };
 		B1F29778220E2E8E00BBCBD6 /* VR Journey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VR Journey.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1F2977B220E2E8E00BBCBD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1F2977D220E2E8E00BBCBD6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,10 +90,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B11D0CEC221AFDAA00E594B8 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				B11D0CED221AFDC900E594B8 /* Cells */,
+				B1F29782220E2E8E00BBCBD6 /* VR_Journey.xcdatamodeld */,
+				B1F29785220E2E9000BBCBD6 /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		B11D0CED221AFDC900E594B8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B11D0CEA221AFB4F00E594B8 /* Persona Table View Cell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		B169DCCE221A2BE500E39BE3 /* Game Setup */ = {
+			isa = PBXGroup;
+			children = (
+				B169DCD1221A2C7400E39BE3 /* View Controllers */,
+				B169DCD2221A2C7F00E39BE3 /* Views */,
+			);
+			path = "Game Setup";
+			sourceTree = "<group>";
+		};
+		B169DCCF221A2C2600E39BE3 /* VIews */ = {
+			isa = PBXGroup;
+			children = (
+				B1F29787220E2E9000BBCBD6 /* LaunchScreen.storyboard */,
+				B1F2977F220E2E8E00BBCBD6 /* Main.storyboard */,
+			);
+			path = VIews;
+			sourceTree = "<group>";
+		};
+		B169DCD0221A2C3200E39BE3 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B1F2977D220E2E8E00BBCBD6 /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		B169DCD1221A2C7400E39BE3 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B169DCD3221A2CBA00E39BE3 /* Learning Objectives View Controller.swift */,
+				B169DCD7221A31DC00E39BE3 /* Personas View Controller.swift */,
+				B169DCD9221A31E900E39BE3 /* Game Rules View Controller.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		B169DCD2221A2C7F00E39BE3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B169DCD5221A2CD400E39BE3 /* Game Setup.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		B1F2976F220E2E8E00BBCBD6 = {
 			isa = PBXGroup;
 			children = (
 				B1F2977A220E2E8E00BBCBD6 /* VR Journey */,
+				B1F2978A220E2E9000BBCBD6 /* Info.plist */,
 				B1F29792220E2E9000BBCBD6 /* VR JourneyTests */,
 				B1F2979D220E2E9000BBCBD6 /* VR JourneyUITests */,
 				B1F29779220E2E8E00BBCBD6 /* Products */,
@@ -104,10 +177,9 @@
 			isa = PBXGroup;
 			children = (
 				B1F297AC220E2EB800BBCBD6 /* Launch */,
+				B169DCCE221A2BE500E39BE3 /* Game Setup */,
 				B1F297AF220E3BFE00BBCBD6 /* Main Game */,
-				B1F29785220E2E9000BBCBD6 /* Assets.xcassets */,
-				B1F2978A220E2E9000BBCBD6 /* Info.plist */,
-				B1F29782220E2E8E00BBCBD6 /* VR_Journey.xcdatamodeld */,
+				B11D0CEC221AFDAA00E594B8 /* Shared */,
 			);
 			path = "VR Journey";
 			sourceTree = "<group>";
@@ -133,10 +205,9 @@
 		B1F297AC220E2EB800BBCBD6 /* Launch */ = {
 			isa = PBXGroup;
 			children = (
-				B1F29787220E2E9000BBCBD6 /* LaunchScreen.storyboard */,
-				B1F2977D220E2E8E00BBCBD6 /* ViewController.swift */,
 				B1F2977B220E2E8E00BBCBD6 /* AppDelegate.swift */,
-				B1F2977F220E2E8E00BBCBD6 /* Main.storyboard */,
+				B169DCD0221A2C3200E39BE3 /* View Controllers */,
+				B169DCCF221A2C2600E39BE3 /* VIews */,
 			);
 			path = Launch;
 			sourceTree = "<group>";
@@ -255,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1F297B3220E3C7300BBCBD6 /* Game.storyboard in Resources */,
+				B169DCD6221A2CD400E39BE3 /* Game Setup.storyboard in Resources */,
 				B1F29789220E2E9000BBCBD6 /* LaunchScreen.storyboard in Resources */,
 				B1F29786220E2E9000BBCBD6 /* Assets.xcassets in Resources */,
 				B1F29781220E2E8E00BBCBD6 /* Main.storyboard in Resources */,
@@ -285,7 +357,11 @@
 				B1F2977E220E2E8E00BBCBD6 /* ViewController.swift in Sources */,
 				B1F2977C220E2E8E00BBCBD6 /* AppDelegate.swift in Sources */,
 				B1F29784220E2E8E00BBCBD6 /* VR_Journey.xcdatamodeld in Sources */,
+				B11D0CEB221AFB4F00E594B8 /* Persona Table View Cell.swift in Sources */,
 				B1F297B1220E3C6800BBCBD6 /* Game View Controller .swift in Sources */,
+				B169DCD4221A2CBA00E39BE3 /* Learning Objectives View Controller.swift in Sources */,
+				B169DCDA221A31E900E39BE3 /* Game Rules View Controller.swift in Sources */,
+				B169DCD8221A31DC00E39BE3 /* Personas View Controller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,7 +538,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 25A6956P8C;
-				INFOPLIST_FILE = "VR Journey/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -480,7 +556,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 25A6956P8C;
-				INFOPLIST_FILE = "VR Journey/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
