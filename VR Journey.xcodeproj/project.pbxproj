@@ -12,6 +12,9 @@
 		B169DCD6221A2CD400E39BE3 /* Game Setup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B169DCD5221A2CD400E39BE3 /* Game Setup.storyboard */; };
 		B169DCD8221A31DC00E39BE3 /* Personas View Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B169DCD7221A31DC00E39BE3 /* Personas View Controller.swift */; };
 		B169DCDA221A31E900E39BE3 /* Game Rules View Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B169DCD9221A31E900E39BE3 /* Game Rules View Controller.swift */; };
+		B18B9B56221C9BA9005BAC17 /* Select Players.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B18B9B55221C9BA9005BAC17 /* Select Players.storyboard */; };
+		B18B9B58221C9BC3005BAC17 /* Select Players View Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18B9B57221C9BC3005BAC17 /* Select Players View Controller.swift */; };
+		B18B9B5A221CB800005BAC17 /* SelectPlayerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18B9B59221CB800005BAC17 /* SelectPlayerCollectionViewCell.swift */; };
 		B1F2977C220E2E8E00BBCBD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F2977B220E2E8E00BBCBD6 /* AppDelegate.swift */; };
 		B1F2977E220E2E8E00BBCBD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F2977D220E2E8E00BBCBD6 /* ViewController.swift */; };
 		B1F29781220E2E8E00BBCBD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1F2977F220E2E8E00BBCBD6 /* Main.storyboard */; };
@@ -47,6 +50,9 @@
 		B169DCD5221A2CD400E39BE3 /* Game Setup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Game Setup.storyboard"; sourceTree = "<group>"; };
 		B169DCD7221A31DC00E39BE3 /* Personas View Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Personas View Controller.swift"; sourceTree = "<group>"; };
 		B169DCD9221A31E900E39BE3 /* Game Rules View Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game Rules View Controller.swift"; sourceTree = "<group>"; };
+		B18B9B55221C9BA9005BAC17 /* Select Players.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Select Players.storyboard"; sourceTree = "<group>"; };
+		B18B9B57221C9BC3005BAC17 /* Select Players View Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Select Players View Controller.swift"; sourceTree = "<group>"; };
+		B18B9B59221CB800005BAC17 /* SelectPlayerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPlayerCollectionViewCell.swift; sourceTree = "<group>"; };
 		B1F29778220E2E8E00BBCBD6 /* VR Journey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VR Journey.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1F2977B220E2E8E00BBCBD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1F2977D220E2E8E00BBCBD6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,17 +110,18 @@
 			isa = PBXGroup;
 			children = (
 				B11D0CEA221AFB4F00E594B8 /* Persona Table View Cell.swift */,
+				B18B9B59221CB800005BAC17 /* SelectPlayerCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		B169DCCE221A2BE500E39BE3 /* Game Setup */ = {
+		B169DCCE221A2BE500E39BE3 /* Rules and Objectives */ = {
 			isa = PBXGroup;
 			children = (
 				B169DCD1221A2C7400E39BE3 /* View Controllers */,
 				B169DCD2221A2C7F00E39BE3 /* Views */,
 			);
-			path = "Game Setup";
+			path = "Rules and Objectives";
 			sourceTree = "<group>";
 		};
 		B169DCCF221A2C2600E39BE3 /* VIews */ = {
@@ -152,6 +159,54 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		B18B9B4F221C9ACC005BAC17 /* Score Board */ = {
+			isa = PBXGroup;
+			children = (
+				B18B9B51221C9AFA005BAC17 /* View Controllers */,
+				B18B9B52221C9B01005BAC17 /* Views */,
+			);
+			path = "Score Board";
+			sourceTree = "<group>";
+		};
+		B18B9B50221C9AE0005BAC17 /* Select Players */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Select Players";
+			sourceTree = "<group>";
+		};
+		B18B9B51221C9AFA005BAC17 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B18B9B57221C9BC3005BAC17 /* Select Players View Controller.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		B18B9B52221C9B01005BAC17 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B18B9B55221C9BA9005BAC17 /* Select Players.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B18B9B53221C9B31005BAC17 /* VIew Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B1F297B2220E3C7300BBCBD6 /* Game.storyboard */,
+			);
+			path = "VIew Controllers";
+			sourceTree = "<group>";
+		};
+		B18B9B54221C9B3C005BAC17 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B1F297B0220E3C6800BBCBD6 /* Game View Controller .swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		B1F2976F220E2E8E00BBCBD6 = {
 			isa = PBXGroup;
 			children = (
@@ -177,7 +232,9 @@
 			isa = PBXGroup;
 			children = (
 				B1F297AC220E2EB800BBCBD6 /* Launch */,
-				B169DCCE221A2BE500E39BE3 /* Game Setup */,
+				B169DCCE221A2BE500E39BE3 /* Rules and Objectives */,
+				B18B9B4F221C9ACC005BAC17 /* Score Board */,
+				B18B9B50221C9AE0005BAC17 /* Select Players */,
 				B1F297AF220E3BFE00BBCBD6 /* Main Game */,
 				B11D0CEC221AFDAA00E594B8 /* Shared */,
 			);
@@ -205,9 +262,9 @@
 		B1F297AC220E2EB800BBCBD6 /* Launch */ = {
 			isa = PBXGroup;
 			children = (
-				B1F2977B220E2E8E00BBCBD6 /* AppDelegate.swift */,
 				B169DCD0221A2C3200E39BE3 /* View Controllers */,
 				B169DCCF221A2C2600E39BE3 /* VIews */,
+				B1F2977B220E2E8E00BBCBD6 /* AppDelegate.swift */,
 			);
 			path = Launch;
 			sourceTree = "<group>";
@@ -215,8 +272,8 @@
 		B1F297AF220E3BFE00BBCBD6 /* Main Game */ = {
 			isa = PBXGroup;
 			children = (
-				B1F297B0220E3C6800BBCBD6 /* Game View Controller .swift */,
-				B1F297B2220E3C7300BBCBD6 /* Game.storyboard */,
+				B18B9B54221C9B3C005BAC17 /* Views */,
+				B18B9B53221C9B31005BAC17 /* VIew Controllers */,
 			);
 			path = "Main Game";
 			sourceTree = "<group>";
@@ -327,6 +384,7 @@
 			files = (
 				B1F297B3220E3C7300BBCBD6 /* Game.storyboard in Resources */,
 				B169DCD6221A2CD400E39BE3 /* Game Setup.storyboard in Resources */,
+				B18B9B56221C9BA9005BAC17 /* Select Players.storyboard in Resources */,
 				B1F29789220E2E9000BBCBD6 /* LaunchScreen.storyboard in Resources */,
 				B1F29786220E2E9000BBCBD6 /* Assets.xcassets in Resources */,
 				B1F29781220E2E8E00BBCBD6 /* Main.storyboard in Resources */,
@@ -355,7 +413,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1F2977E220E2E8E00BBCBD6 /* ViewController.swift in Sources */,
+				B18B9B5A221CB800005BAC17 /* SelectPlayerCollectionViewCell.swift in Sources */,
 				B1F2977C220E2E8E00BBCBD6 /* AppDelegate.swift in Sources */,
+				B18B9B58221C9BC3005BAC17 /* Select Players View Controller.swift in Sources */,
 				B1F29784220E2E8E00BBCBD6 /* VR_Journey.xcdatamodeld in Sources */,
 				B11D0CEB221AFB4F00E594B8 /* Persona Table View Cell.swift in Sources */,
 				B1F297B1220E3C6800BBCBD6 /* Game View Controller .swift in Sources */,
