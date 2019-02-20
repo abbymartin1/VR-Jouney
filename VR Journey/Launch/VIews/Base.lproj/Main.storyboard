@@ -40,14 +40,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VR Journey" translatesAutoresizingMaskIntoConstraints="NO" id="ixF-dh-ozc">
-                                <rect key="frame" x="82" y="288" width="250" height="250"/>
+                                <rect key="frame" x="82" y="188" width="250" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="4tu-aq-qae"/>
                                     <constraint firstAttribute="height" constant="250" id="svH-Pu-ymA"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AuO-91-fw3">
-                                <rect key="frame" x="8" y="568" width="398" height="50"/>
+                                <rect key="frame" x="8" y="488" width="398" height="50"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="QcQ-L2-VhU"/>
@@ -62,7 +62,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mcm-l4-HdF">
-                                <rect key="frame" x="8" y="684" width="398" height="50"/>
+                                <rect key="frame" x="8" y="604" width="398" height="50"/>
                                 <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="F4x-Jx-bXz"/>
@@ -74,10 +74,11 @@
                                 </state>
                                 <connections>
                                     <action selector="selectPlayersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ehh-DW-IjN"/>
+                                    <segue destination="cae-da-IFN" kind="show" id="ZQw-vi-kcR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2z-VB-Bbv">
-                                <rect key="frame" x="8" y="626" width="398" height="50"/>
+                                <rect key="frame" x="8" y="546" width="398" height="50"/>
                                 <color key="backgroundColor" red="0.17412886991718701" green="0.17412886991718701" blue="0.17412886991718701" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="R6A-Rf-YD9"/>
@@ -93,7 +94,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iLX-QC-Wld">
-                                <rect key="frame" x="8" y="742" width="398" height="50"/>
+                                <rect key="frame" x="8" y="662" width="398" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="656-nf-7x6"/>
@@ -110,9 +111,9 @@
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="AuO-91-fw3" firstAttribute="top" secondItem="ixF-dh-ozc" secondAttribute="bottom" constant="30" id="0ox-H8-ZIe"/>
+                            <constraint firstItem="AuO-91-fw3" firstAttribute="top" secondItem="ixF-dh-ozc" secondAttribute="bottom" constant="50" id="0ox-H8-ZIe"/>
                             <constraint firstItem="ixF-dh-ozc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Ur-sI-4EN"/>
-                            <constraint firstItem="ixF-dh-ozc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="7cL-Pb-iVc"/>
+                            <constraint firstItem="ixF-dh-ozc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="7cL-Pb-iVc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AuO-91-fw3" secondAttribute="trailing" constant="8" id="COk-Rm-CGB"/>
                             <constraint firstItem="iLX-QC-Wld" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Hy1-ef-2pZ"/>
                             <constraint firstItem="Z2z-VB-Bbv" firstAttribute="top" secondItem="AuO-91-fw3" secondAttribute="bottom" constant="8" id="XUV-CU-0us"/>
@@ -139,7 +140,15 @@
                 <viewControllerPlaceholder storyboardName="Game Setup" id="bba-5X-zQz" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u0T-lg-Vo4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1020" y="250"/>
+            <point key="canvasLocation" x="987" y="133"/>
+        </scene>
+        <!--Select Players-->
+        <scene sceneID="B3r-sM-eFI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Select Players" id="cae-da-IFN" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mdC-gM-esB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="988" y="261"/>
         </scene>
     </scenes>
     <resources>
