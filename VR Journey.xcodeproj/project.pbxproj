@@ -7,23 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B11D0CEB221AFB4F00E594B8 /* Persona Table View Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11D0CEA221AFB4F00E594B8 /* Persona Table View Cell.swift */; };
-		B169DCD4221A2CBA00E39BE3 /* Learning Objectives View Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B169DCD3221A2CBA00E39BE3 /* Learning Objectives View Controller.swift */; };
+		B11D0CEB221AFB4F00E594B8 /* PersonaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11D0CEA221AFB4F00E594B8 /* PersonaTableViewCell.swift */; };
+		B169DCD4221A2CBA00E39BE3 /* LearningObjectivesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B169DCD3221A2CBA00E39BE3 /* LearningObjectivesViewController.swift */; };
 		B169DCD6221A2CD400E39BE3 /* Game Setup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B169DCD5221A2CD400E39BE3 /* Game Setup.storyboard */; };
-		B169DCD8221A31DC00E39BE3 /* Personas View Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B169DCD7221A31DC00E39BE3 /* Personas View Controller.swift */; };
-		B169DCDA221A31E900E39BE3 /* Game Rules View Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B169DCD9221A31E900E39BE3 /* Game Rules View Controller.swift */; };
+		B169DCD8221A31DC00E39BE3 /* PersonasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B169DCD7221A31DC00E39BE3 /* PersonasViewController.swift */; };
+		B169DCDA221A31E900E39BE3 /* GameRulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B169DCD9221A31E900E39BE3 /* GameRulesViewController.swift */; };
 		B18B9B56221C9BA9005BAC17 /* Select Players.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B18B9B55221C9BA9005BAC17 /* Select Players.storyboard */; };
-		B18B9B58221C9BC3005BAC17 /* Select Players View Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18B9B57221C9BC3005BAC17 /* Select Players View Controller.swift */; };
+		B18B9B58221C9BC3005BAC17 /* SelectPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18B9B57221C9BC3005BAC17 /* SelectPlayersViewController.swift */; };
 		B18B9B5A221CB800005BAC17 /* SelectPlayerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18B9B59221CB800005BAC17 /* SelectPlayerCollectionViewCell.swift */; };
+		B18B9B71221F1C29005BAC17 /* PersonaImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18B9B70221F1C29005BAC17 /* PersonaImageCollectionViewCell.swift */; };
+		B18B9B73221F226F005BAC17 /* SelectPlayerPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18B9B72221F226F005BAC17 /* SelectPlayerPopoverViewController.swift */; };
 		B1F2977C220E2E8E00BBCBD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F2977B220E2E8E00BBCBD6 /* AppDelegate.swift */; };
-		B1F2977E220E2E8E00BBCBD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F2977D220E2E8E00BBCBD6 /* ViewController.swift */; };
+		B1F2977E220E2E8E00BBCBD6 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F2977D220E2E8E00BBCBD6 /* MenuViewController.swift */; };
 		B1F29781220E2E8E00BBCBD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1F2977F220E2E8E00BBCBD6 /* Main.storyboard */; };
 		B1F29784220E2E8E00BBCBD6 /* VR_Journey.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B1F29782220E2E8E00BBCBD6 /* VR_Journey.xcdatamodeld */; };
 		B1F29786220E2E9000BBCBD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1F29785220E2E9000BBCBD6 /* Assets.xcassets */; };
 		B1F29789220E2E9000BBCBD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1F29787220E2E9000BBCBD6 /* LaunchScreen.storyboard */; };
 		B1F29794220E2E9000BBCBD6 /* VR_JourneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F29793220E2E9000BBCBD6 /* VR_JourneyTests.swift */; };
 		B1F2979F220E2E9000BBCBD6 /* VR_JourneyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F2979E220E2E9000BBCBD6 /* VR_JourneyUITests.swift */; };
-		B1F297B1220E3C6800BBCBD6 /* Game View Controller .swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F297B0220E3C6800BBCBD6 /* Game View Controller .swift */; };
+		B1F297B1220E3C6800BBCBD6 /* GameViewController .swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F297B0220E3C6800BBCBD6 /* GameViewController .swift */; };
 		B1F297B3220E3C7300BBCBD6 /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1F297B2220E3C7300BBCBD6 /* Game.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -45,17 +47,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B11D0CEA221AFB4F00E594B8 /* Persona Table View Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Persona Table View Cell.swift"; sourceTree = "<group>"; };
-		B169DCD3221A2CBA00E39BE3 /* Learning Objectives View Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Learning Objectives View Controller.swift"; sourceTree = "<group>"; };
+		B11D0CEA221AFB4F00E594B8 /* PersonaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonaTableViewCell.swift; sourceTree = "<group>"; };
+		B169DCD3221A2CBA00E39BE3 /* LearningObjectivesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningObjectivesViewController.swift; sourceTree = "<group>"; };
 		B169DCD5221A2CD400E39BE3 /* Game Setup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Game Setup.storyboard"; sourceTree = "<group>"; };
-		B169DCD7221A31DC00E39BE3 /* Personas View Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Personas View Controller.swift"; sourceTree = "<group>"; };
-		B169DCD9221A31E900E39BE3 /* Game Rules View Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game Rules View Controller.swift"; sourceTree = "<group>"; };
+		B169DCD7221A31DC00E39BE3 /* PersonasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonasViewController.swift; sourceTree = "<group>"; };
+		B169DCD9221A31E900E39BE3 /* GameRulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRulesViewController.swift; sourceTree = "<group>"; };
 		B18B9B55221C9BA9005BAC17 /* Select Players.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Select Players.storyboard"; sourceTree = "<group>"; };
-		B18B9B57221C9BC3005BAC17 /* Select Players View Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Select Players View Controller.swift"; sourceTree = "<group>"; };
+		B18B9B57221C9BC3005BAC17 /* SelectPlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPlayersViewController.swift; sourceTree = "<group>"; };
 		B18B9B59221CB800005BAC17 /* SelectPlayerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPlayerCollectionViewCell.swift; sourceTree = "<group>"; };
+		B18B9B70221F1C29005BAC17 /* PersonaImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonaImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		B18B9B72221F226F005BAC17 /* SelectPlayerPopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPlayerPopoverViewController.swift; sourceTree = "<group>"; };
 		B1F29778220E2E8E00BBCBD6 /* VR Journey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VR Journey.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1F2977B220E2E8E00BBCBD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B1F2977D220E2E8E00BBCBD6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B1F2977D220E2E8E00BBCBD6 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		B1F29780220E2E8E00BBCBD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B1F29783220E2E8E00BBCBD6 /* VR_Journey.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VR_Journey.xcdatamodel; sourceTree = "<group>"; };
 		B1F29785220E2E9000BBCBD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,7 +71,7 @@
 		B1F2979A220E2E9000BBCBD6 /* VR JourneyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VR JourneyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1F2979E220E2E9000BBCBD6 /* VR_JourneyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VR_JourneyUITests.swift; sourceTree = "<group>"; };
 		B1F297A0220E2E9000BBCBD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B1F297B0220E3C6800BBCBD6 /* Game View Controller .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game View Controller .swift"; sourceTree = "<group>"; };
+		B1F297B0220E3C6800BBCBD6 /* GameViewController .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameViewController .swift"; sourceTree = "<group>"; };
 		B1F297B2220E3C7300BBCBD6 /* Game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,8 +113,9 @@
 		B11D0CED221AFDC900E594B8 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				B11D0CEA221AFB4F00E594B8 /* Persona Table View Cell.swift */,
+				B11D0CEA221AFB4F00E594B8 /* PersonaTableViewCell.swift */,
 				B18B9B59221CB800005BAC17 /* SelectPlayerCollectionViewCell.swift */,
+				B18B9B70221F1C29005BAC17 /* PersonaImageCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -136,7 +141,7 @@
 		B169DCD0221A2C3200E39BE3 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B1F2977D220E2E8E00BBCBD6 /* ViewController.swift */,
+				B1F2977D220E2E8E00BBCBD6 /* MenuViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -144,9 +149,9 @@
 		B169DCD1221A2C7400E39BE3 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B169DCD3221A2CBA00E39BE3 /* Learning Objectives View Controller.swift */,
-				B169DCD7221A31DC00E39BE3 /* Personas View Controller.swift */,
-				B169DCD9221A31E900E39BE3 /* Game Rules View Controller.swift */,
+				B169DCD3221A2CBA00E39BE3 /* LearningObjectivesViewController.swift */,
+				B169DCD7221A31DC00E39BE3 /* PersonasViewController.swift */,
+				B169DCD9221A31E900E39BE3 /* GameRulesViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -171,6 +176,8 @@
 		B18B9B50221C9AE0005BAC17 /* Select Players */ = {
 			isa = PBXGroup;
 			children = (
+				B18B9B6E221F150B005BAC17 /* View Controllers */,
+				B18B9B6F221F1512005BAC17 /* Views */,
 			);
 			path = "Select Players";
 			sourceTree = "<group>";
@@ -178,7 +185,6 @@
 		B18B9B51221C9AFA005BAC17 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B18B9B57221C9BC3005BAC17 /* Select Players View Controller.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -186,23 +192,40 @@
 		B18B9B52221C9B01005BAC17 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B18B9B55221C9BA9005BAC17 /* Select Players.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		B18B9B53221C9B31005BAC17 /* VIew Controllers */ = {
+		B18B9B53221C9B31005BAC17 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B1F297B2220E3C7300BBCBD6 /* Game.storyboard */,
+				B1F297B0220E3C6800BBCBD6 /* GameViewController .swift */,
 			);
+			name = "View Controllers";
 			path = "VIew Controllers";
 			sourceTree = "<group>";
 		};
 		B18B9B54221C9B3C005BAC17 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B1F297B0220E3C6800BBCBD6 /* Game View Controller .swift */,
+				B1F297B2220E3C7300BBCBD6 /* Game.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B18B9B6E221F150B005BAC17 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B18B9B57221C9BC3005BAC17 /* SelectPlayersViewController.swift */,
+				B18B9B72221F226F005BAC17 /* SelectPlayerPopoverViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		B18B9B6F221F1512005BAC17 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B18B9B55221C9BA9005BAC17 /* Select Players.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -272,8 +295,8 @@
 		B1F297AF220E3BFE00BBCBD6 /* Main Game */ = {
 			isa = PBXGroup;
 			children = (
+				B18B9B53221C9B31005BAC17 /* View Controllers */,
 				B18B9B54221C9B3C005BAC17 /* Views */,
-				B18B9B53221C9B31005BAC17 /* VIew Controllers */,
 			);
 			path = "Main Game";
 			sourceTree = "<group>";
@@ -412,16 +435,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1F2977E220E2E8E00BBCBD6 /* ViewController.swift in Sources */,
+				B1F2977E220E2E8E00BBCBD6 /* MenuViewController.swift in Sources */,
+				B18B9B71221F1C29005BAC17 /* PersonaImageCollectionViewCell.swift in Sources */,
 				B18B9B5A221CB800005BAC17 /* SelectPlayerCollectionViewCell.swift in Sources */,
 				B1F2977C220E2E8E00BBCBD6 /* AppDelegate.swift in Sources */,
-				B18B9B58221C9BC3005BAC17 /* Select Players View Controller.swift in Sources */,
+				B18B9B73221F226F005BAC17 /* SelectPlayerPopoverViewController.swift in Sources */,
+				B18B9B58221C9BC3005BAC17 /* SelectPlayersViewController.swift in Sources */,
 				B1F29784220E2E8E00BBCBD6 /* VR_Journey.xcdatamodeld in Sources */,
-				B11D0CEB221AFB4F00E594B8 /* Persona Table View Cell.swift in Sources */,
-				B1F297B1220E3C6800BBCBD6 /* Game View Controller .swift in Sources */,
-				B169DCD4221A2CBA00E39BE3 /* Learning Objectives View Controller.swift in Sources */,
-				B169DCDA221A31E900E39BE3 /* Game Rules View Controller.swift in Sources */,
-				B169DCD8221A31DC00E39BE3 /* Personas View Controller.swift in Sources */,
+				B11D0CEB221AFB4F00E594B8 /* PersonaTableViewCell.swift in Sources */,
+				B1F297B1220E3C6800BBCBD6 /* GameViewController .swift in Sources */,
+				B169DCD4221A2CBA00E39BE3 /* LearningObjectivesViewController.swift in Sources */,
+				B169DCDA221A31E900E39BE3 /* GameRulesViewController.swift in Sources */,
+				B169DCD8221A31DC00E39BE3 /* PersonasViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

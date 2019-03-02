@@ -121,11 +121,20 @@
                     <connections>
                         <outlet property="playersCollectionView" destination="0jO-Cm-Ux7" id="OAn-Vz-B5r"/>
                         <outlet property="selectNumberPlayersTextField" destination="87O-sP-kSH" id="SHC-rx-xA0"/>
+                        <segue destination="bxZ-5B-H3g" kind="presentation" identifier="ShowPopover" id="fsC-z7-pLv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="okp-d3-lo3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-207.24637681159422" y="20.758928571428569"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="Bgr-XP-K4v">
+            <objects>
+                <viewControllerPlaceholder id="bxZ-5B-H3g" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9TH-Ph-UqT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="387" y="-15"/>
         </scene>
         <!--Main-->
         <scene sceneID="MNa-8W-BWs">
@@ -133,7 +142,7 @@
                 <viewControllerPlaceholder storyboardName="Main" id="N1J-cV-zUD" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iMi-GK-6za" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="425" y="111"/>
+            <point key="canvasLocation" x="306" y="97"/>
         </scene>
     </scenes>
     <resources>
