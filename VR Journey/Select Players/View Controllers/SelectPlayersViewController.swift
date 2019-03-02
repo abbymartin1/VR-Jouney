@@ -13,7 +13,6 @@ class SelectPlayersViewController: UIViewController {
     //MARK: Outlets
     @IBOutlet var selectNumberPlayersTextField: UITextField!
     @IBOutlet var playersCollectionView: UICollectionView!
-    @IBOutlet var playerCollectionViewCell: UICollectionViewCell!
     
     //MARK: Properties
     let numberOfPickerElements = 3

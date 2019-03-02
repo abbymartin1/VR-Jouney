@@ -11,7 +11,4 @@ import UIKit
 class SelectPlayerCollectionViewCell: UICollectionViewCell {
     @IBOutlet var playersImage: UIImageView!
     @IBOutlet var playersName: UILabel!
-    
-    
-    
 }

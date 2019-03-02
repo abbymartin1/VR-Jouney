@@ -34,12 +34,12 @@
         <!--Menu-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VR_Journey" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MenuViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VR Journey" translatesAutoresizingMaskIntoConstraints="NO" id="ixF-dh-ozc">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo Grey" translatesAutoresizingMaskIntoConstraints="NO" id="ixF-dh-ozc">
                                 <rect key="frame" x="82" y="188" width="250" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="4tu-aq-qae"/>
@@ -73,8 +73,7 @@
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="selectPlayersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ehh-DW-IjN"/>
-                                    <segue destination="cae-da-IFN" kind="show" id="ZQw-vi-kcR"/>
+                                    <segue destination="Ezc-ac-CpE" kind="show" id="yTf-sG-22a"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2z-VB-Bbv">
@@ -88,10 +87,6 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <action selector="playButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6vU-Ja-WPh"/>
-                                    <action selector="scoreBoardTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l0E-h2-bHh"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iLX-QC-Wld">
                                 <rect key="frame" x="8" y="662" width="398" height="50"/>
@@ -105,7 +100,7 @@
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="playButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eoj-tC-0EY"/>
+                                    <segue destination="eVC-ED-7Ab" kind="show" id="HQb-rA-1mA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -143,15 +138,23 @@
             <point key="canvasLocation" x="987" y="133"/>
         </scene>
         <!--Select Players-->
-        <scene sceneID="B3r-sM-eFI">
+        <scene sceneID="Tpw-56-RKk">
             <objects>
-                <viewControllerPlaceholder storyboardName="Select Players" id="cae-da-IFN" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mdC-gM-esB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Select Players" id="Ezc-ac-CpE" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0y0-l1-2Tq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="988" y="261"/>
+            <point key="canvasLocation" x="994" y="198"/>
+        </scene>
+        <!--Game-->
+        <scene sceneID="ZDt-pd-0wG">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Game" id="eVC-ED-7Ab" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p0C-cv-GEU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1018" y="273"/>
         </scene>
     </scenes>
     <resources>
-        <image name="VR Journey" width="375" height="375"/>
+        <image name="Logo Grey" width="1275" height="1275"/>
     </resources>
 </document>
