@@ -12,19 +12,46 @@ class SelectPlayerPopoverViewController: UIViewController {
     //MARK: Outlets
     @IBOutlet var backgroundView: UIView!
     @IBOutlet var frontView: UIView!
-    @IBOutlet var titleLabel: UILabel!
     @IBOutlet var playerNameTextField: UITextField!
     @IBOutlet var personaImageCollectionView: UICollectionView!
+    @IBOutlet var enterPlayerNameLabel: UILabel!
     
     //MARK: Properties
-    private let reuseIdentifier = "SelectPlayerCell"
+    private let reuseIdentifier = "selectPlayersPopoverCell"
+    var selectedCell = 0;
+    let playerTypes = ["Gaming Industry", "Travel Industry", "Medical Industry", "Other Industry"];
+    let playerImages = [#imageLiteral(resourceName: "IMG_1878"), #imageLiteral(resourceName: "logo Orange "), #imageLiteral(resourceName: "Logo Grey"), #imageLiteral(resourceName: "Logo White")];
     
     //MARK: Overrides
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        personaImageCollectionView.delegate = self
+        personaImageCollectionView.dataSource = self
+        setUpUI()
+    }
     
     //MARK: Methods
     
-    //MARK: Actions
+    func setUpUI() {
+        //set title
+        switch selectedCell {
+        case 0:
+            enterPlayerNameLabel.text = "Enter Player One's Name"
+        case 1:
+            enterPlayerNameLabel.text = "Enter Player Two's Name"
+        case 2:
+            enterPlayerNameLabel.text = "Enter Player Three's Name"
+        case 3:
+            enterPlayerNameLabel.text = "Enter Player Four's Name"
+        default:
+            enterPlayerNameLabel.text = "Enter Player's Name"
+        }
+    }
     
+    //MARK: Actions
+    @IBAction func doneButtonTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 }
 
 extension SelectPlayerPopoverViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -33,16 +60,15 @@ extension SelectPlayerPopoverViewController: UICollectionViewDelegate, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = personaImageCollectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! SelectPlayerCollectionViewCell
+        let cell = personaImageCollectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! SelectPlayerPopoverCollectionViewCell
         cell.backgroundColor = .black
-        cell.playersImage.image = #imageLiteral(resourceName: "VR Journey")
-        cell.playersName.text =  ""
+        cell.playersName.text = playerTypes[indexPath.row]
+        cell.playersImage.image = playerImages[indexPath.row]
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //TODO: Display popup allowing user to pick their player and set name
-        performSegue(withIdentifier: "ShowPopover", sender: nil)
     }
     
 }

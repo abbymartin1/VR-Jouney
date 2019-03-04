@@ -121,20 +121,143 @@
                     <connections>
                         <outlet property="playersCollectionView" destination="0jO-Cm-Ux7" id="OAn-Vz-B5r"/>
                         <outlet property="selectNumberPlayersTextField" destination="87O-sP-kSH" id="SHC-rx-xA0"/>
-                        <segue destination="bxZ-5B-H3g" kind="presentation" identifier="ShowPopover" id="fsC-z7-pLv"/>
+                        <segue destination="XdN-mc-OKr" kind="presentation" identifier="displayPopover" modalPresentationStyle="overCurrentContext" id="sGP-43-MwH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="okp-d3-lo3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-207.24637681159422" y="20.758928571428569"/>
         </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="Bgr-XP-K4v">
+        <!--Select Player Popover View Controller-->
+        <scene sceneID="nne-au-WTQ">
             <objects>
-                <viewControllerPlaceholder id="bxZ-5B-H3g" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9TH-Ph-UqT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="XdN-mc-OKr" customClass="SelectPlayerPopoverViewController" customModule="VR_Journey" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lt4-2b-p4D">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SH3-bx-Q40">
+                                <rect key="frame" x="50" y="234" width="314" height="428"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AnS-Kb-JWN">
+                                        <rect key="frame" x="8" y="40" width="298" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5WY-bP-UjF">
+                                        <rect key="frame" x="20" y="100" width="274" height="270"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eW1-bJ-HjC">
+                                            <size key="itemSize" width="127" height="122"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="selectPlayersPopoverCell" id="HqF-GB-vM8" customClass="SelectPlayerPopoverCollectionViewCell" customModule="VR_Journey" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="127" height="122"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="127" height="122"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gaming Industry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEU-5S-sqD">
+                                                            <rect key="frame" x="0.0" y="101" width="127" height="21"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="21" id="0sZ-cI-y3Y"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo Orange " translatesAutoresizingMaskIntoConstraints="NO" id="j31-SW-Qsl">
+                                                            <rect key="frame" x="0.0" y="0.0" width="127" height="122"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                </view>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="j31-SW-Qsl" secondAttribute="bottom" id="FH5-Qx-guf"/>
+                                                    <constraint firstAttribute="trailing" secondItem="j31-SW-Qsl" secondAttribute="trailing" id="Wpd-VJ-AfD"/>
+                                                    <constraint firstItem="j31-SW-Qsl" firstAttribute="leading" secondItem="HqF-GB-vM8" secondAttribute="leading" id="aNp-oy-t1f"/>
+                                                    <constraint firstItem="zEU-5S-sqD" firstAttribute="leading" secondItem="HqF-GB-vM8" secondAttribute="leading" id="ivn-ZJ-mbJ"/>
+                                                    <constraint firstItem="j31-SW-Qsl" firstAttribute="top" secondItem="HqF-GB-vM8" secondAttribute="top" id="nFQ-Zo-UY4"/>
+                                                    <constraint firstAttribute="trailing" secondItem="zEU-5S-sqD" secondAttribute="trailing" id="ngb-bk-nqt"/>
+                                                    <constraint firstAttribute="bottom" secondItem="zEU-5S-sqD" secondAttribute="bottom" id="tTz-Yn-KuF"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="playersImage" destination="j31-SW-Qsl" id="qJB-KU-grU"/>
+                                                    <outlet property="playersName" destination="zEU-5S-sqD" id="cwK-OX-eWX"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Player Cell:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Yv-yY-7Ux">
+                                        <rect key="frame" x="17" y="74" width="137.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bsl-QN-khh">
+                                        <rect key="frame" x="8" y="390" width="298" height="30"/>
+                                        <color key="backgroundColor" red="0.25097686050000001" green="0.25097858909999998" blue="0.25098297000000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Gc1-5N-3vg"/>
+                                        </constraints>
+                                        <state key="normal" title="Done">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="doneButtonTapped:" destination="XdN-mc-OKr" eventType="touchUpInside" id="BGv-Di-Cff"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Players Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQP-93-Vsq">
+                                        <rect key="frame" x="8" y="15" width="154" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="AnS-Kb-JWN" firstAttribute="top" secondItem="SH3-bx-Q40" secondAttribute="top" constant="40" id="112-TR-c7P"/>
+                                    <constraint firstItem="dQP-93-Vsq" firstAttribute="top" secondItem="SH3-bx-Q40" secondAttribute="top" constant="15" id="6CZ-pY-1cb"/>
+                                    <constraint firstItem="5WY-bP-UjF" firstAttribute="top" secondItem="AnS-Kb-JWN" secondAttribute="bottom" constant="30" id="7iT-ac-wIM"/>
+                                    <constraint firstAttribute="trailing" secondItem="5WY-bP-UjF" secondAttribute="trailing" constant="20" id="ATP-6k-KPp"/>
+                                    <constraint firstItem="5WY-bP-UjF" firstAttribute="leading" secondItem="SH3-bx-Q40" secondAttribute="leading" constant="20" id="BD6-JT-XRr"/>
+                                    <constraint firstItem="Bsl-QN-khh" firstAttribute="leading" secondItem="SH3-bx-Q40" secondAttribute="leading" constant="8" id="E8A-96-2Fc"/>
+                                    <constraint firstAttribute="trailing" secondItem="AnS-Kb-JWN" secondAttribute="trailing" constant="8" id="F4W-wT-Ndj"/>
+                                    <constraint firstItem="Bsl-QN-khh" firstAttribute="top" secondItem="5WY-bP-UjF" secondAttribute="bottom" constant="20" id="UiO-z9-C4C"/>
+                                    <constraint firstItem="AnS-Kb-JWN" firstAttribute="leading" secondItem="SH3-bx-Q40" secondAttribute="leading" constant="8" id="V4S-JY-g0v"/>
+                                    <constraint firstItem="1Yv-yY-7Ux" firstAttribute="leading" secondItem="SH3-bx-Q40" secondAttribute="leading" constant="17" id="ZcK-4U-mLy"/>
+                                    <constraint firstItem="1Yv-yY-7Ux" firstAttribute="top" secondItem="AnS-Kb-JWN" secondAttribute="bottom" constant="4" id="etH-RH-MR1"/>
+                                    <constraint firstItem="dQP-93-Vsq" firstAttribute="leading" secondItem="SH3-bx-Q40" secondAttribute="leading" constant="8" id="wp8-Sn-aCl"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bsl-QN-khh" secondAttribute="trailing" constant="8" id="xQ2-sd-dPC"/>
+                                    <constraint firstAttribute="bottom" secondItem="Bsl-QN-khh" secondAttribute="bottom" constant="8" id="yyx-d7-S5n"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.28269477739726029" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="SH3-bx-Q40" firstAttribute="centerY" secondItem="lt4-2b-p4D" secondAttribute="centerY" id="7FV-yU-emE"/>
+                            <constraint firstItem="fWr-ti-Gag" firstAttribute="trailing" secondItem="SH3-bx-Q40" secondAttribute="trailing" constant="50" id="E07-yq-5Am"/>
+                            <constraint firstItem="SH3-bx-Q40" firstAttribute="leading" secondItem="fWr-ti-Gag" secondAttribute="leading" constant="50" id="ECM-OV-vu2"/>
+                            <constraint firstItem="fWr-ti-Gag" firstAttribute="bottom" secondItem="SH3-bx-Q40" secondAttribute="bottom" constant="200" id="v5C-uc-0Wk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fWr-ti-Gag"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="lt4-2b-p4D" id="wnN-Wm-3Vl"/>
+                        <outlet property="enterPlayerNameLabel" destination="dQP-93-Vsq" id="Pht-Nd-Wmt"/>
+                        <outlet property="frontView" destination="SH3-bx-Q40" id="rIV-Do-UwH"/>
+                        <outlet property="personaImageCollectionView" destination="5WY-bP-UjF" id="LYr-sr-5UQ"/>
+                        <outlet property="playerNameTextField" destination="AnS-Kb-JWN" id="rKn-9J-84N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dbs-be-xvx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="387" y="-15"/>
+            <point key="canvasLocation" x="698.55072463768124" y="20.758928571428569"/>
         </scene>
         <!--Main-->
         <scene sceneID="MNa-8W-BWs">
@@ -147,5 +270,6 @@
     </scenes>
     <resources>
         <image name="VR Journey" width="375" height="375"/>
+        <image name="logo Orange " width="1275" height="1275"/>
     </resources>
 </document>

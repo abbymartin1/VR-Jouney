@@ -21,6 +21,8 @@ class SelectPlayersViewController: UIViewController {
     let numberOfPlayerArray = ["2", "3", "4"]
     let numberPlayerPicker = UIPickerView()
     private let reuseIdentifier = "SelectPlayerCell"
+    private let numberPlayersIdentifier = "NumberOfPlayers"
+    var selectedPlayer = 0;
     
     //MARK: Overloads
     override func viewDidLoad() {
@@ -33,7 +35,12 @@ class SelectPlayersViewController: UIViewController {
     }
     
     //MARK: Methods
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "displayPopover") {
+            let vc = segue.destination as! SelectPlayerPopoverViewController
+            vc.selectedCell = selectedPlayer
+        }
+    }
     
     //MARK: Actions
     @IBAction func continueButtonTapped(_ sender: Any) {
@@ -57,6 +64,7 @@ extension SelectPlayersViewController: UIPickerViewDelegate, UIPickerViewDataSou
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         selectNumberPlayersTextField.text = numberOfPlayerArray[row]
         //TODO: set number of players into default and reload collection view to only show those players
+        UserDefaults.standard.set(row, forKey: numberPlayersIdentifier)
         self.view.endEditing(true)
     }
     
@@ -77,6 +85,23 @@ extension SelectPlayersViewController: UICollectionViewDelegate, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //TODO: Display popup allowing user to pick their player and set name
+        switch indexPath.row{
+        case 0:
+            //player 1 selected
+            selectedPlayer = 0;
+        case 1:
+            //player 2 selected
+            selectedPlayer = 1;
+        case 2:
+            //player 3 selected
+            selectedPlayer = 2;
+        case 3:
+            //player 4 selected
+            selectedPlayer = 3;
+        default:
+            //no player selected/error
+            selectedPlayer = 0;
+        }
+        performSegue(withIdentifier: "displayPopover", sender: nil)
     }
-
 }
