@@ -12,3 +12,9 @@ class SelectPlayerCollectionViewCell: UICollectionViewCell {
     @IBOutlet var playersImage: UIImageView!
     @IBOutlet var playersName: UILabel!
 }
+
+
+class SelectPlayerPopoverCollectionViewCell: UICollectionViewCell {
+    @IBOutlet var playersImage: UIImageView!
+    @IBOutlet var playersName: UILabel!
+}

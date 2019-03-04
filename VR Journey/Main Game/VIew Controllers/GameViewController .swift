@@ -10,17 +10,17 @@ import UIKit
 
 class GameViewController: ViewController {
     //MARK: Properties
-    var isBasicLevel = false;
-    var index: Int = 0;
-    let basicTitleArray = ["Welcome to VR Journey!", "Pick a Choice"]
+    var isBasicLevel = false
+    var index: Int = 0
+    var playerTurnsCount = 0
+    let numberOfPlayers = 4
+    //UserDefaults.standard.integer(forKey: "NumberOfPlayers")
+    let basicTitleArray = ["Player One's Turn", "Player Two's Turn", "Player Three's Turn", "Player Four's Turn"]
     let advancedTitleArray = ["Welcome to VR Journey! - A", "Pick a Choice"]
     let basicDescription = ["Welcome to the game. You are the CTO (Chief Technology Official) of a startup called 'VR Journey'. You will be asked to choose between different options and your choices will affect how your life plays out.", "123u24u"]
-    let advancedDescription = ["Welcome to the game. You are a ....(advanced)", "8923429u209"]
     let basicButtonOneArray = ["Let's Go!", "Basic 1"]
-    let advancedButtonOneArray = ["Click Me Advanced", "Adv 1"]
     let basicButtonTwoArray = ["Tell me more!", "Basic 2"]
-    let advancedButtonTwoArray = ["Click Me 2 Adv", "Advanced 2"]
-    let backgroundColours = [UIColor.blue, UIColor.yellow, UIColor.orange]
+    let backgroundColours = [UIColor.green, UIColor.red, UIColor.blue]
     
     //MARK: Outlets
     @IBOutlet var entireOptionStackView: UIStackView!
@@ -46,42 +46,46 @@ class GameViewController: ViewController {
     }
     
     func updateText() {
-        if isBasicLevel {
-            if index + 1 > advancedTitleArray.count {
-                //END OF GAME - do something here
-                titleOfMessage.text = "End of Game (basic)"
-                backgroundView.backgroundColor = UIColor.orange
-            } else {
-                titleOfMessage.text = basicTitleArray[index]
-                descriptionTextView.text = basicDescription[index]
-                optionOneButton.setTitle(basicButtonOneArray[index], for: .normal)
-                optionTwoButton.setTitle(basicButtonTwoArray[index], for: .normal)
-                backgroundView.backgroundColor = backgroundColours[index]
-            }
+        if index + 1 > advancedTitleArray.count {
+            //END OF GAME - do something here
+            titleOfMessage.text = "End of Game"
+            descriptionTextView.text = "You have finished the game, congrats. See scores on main page."
+            backgroundView.backgroundColor = UIColor.orange
         } else {
-            if index + 1 > advancedButtonTwoArray.count {
-                //END OF GAME - DO something here
-                titleOfMessage.text = "End of Game (advanced)"
-                backgroundView.backgroundColor = UIColor.orange
-            } else {
-                titleOfMessage.text = advancedTitleArray[index]
-                descriptionTextView.text = advancedDescription[index]
-                optionOneButton.setTitle(advancedButtonOneArray[index], for: .normal)
-                optionTwoButton.setTitle(advancedButtonTwoArray[index], for: .normal)
-                backgroundView.backgroundColor = backgroundColours[index]
-            }
+            titleOfMessage.text = basicTitleArray[index]
+            descriptionTextView.text = basicDescription[index]
+            optionOneButton.setTitle(basicButtonOneArray[index], for: .normal)
+            optionTwoButton.setTitle(basicButtonTwoArray[index], for: .normal)
+            backgroundView.backgroundColor = backgroundColours[index]
+        }
+    }
+    
+    func showScore() {
+        //every player has played
+        playerTurnsCount = 0;
+        //display score popover for that round
+        performSegue(withIdentifier: "showScore", sender: nil)
+    }
+    
+    func updatePlayerName() {
+        if playerTurnsCount < numberOfPlayers {
+            titleOfMessage.text = basicTitleArray[playerTurnsCount];
+        } else {
+            showScore()
+            updateText()
+            index += 1
         }
     }
     
     //MARK: Actions
     @IBAction func buttonOneClicked(_ sender: Any) {
-        index += 1;
-        updateText()
+        playerTurnsCount += 1;
+        updatePlayerName()
     }
     
     @IBAction func buttonTwoClicked(_ sender: Any) {
-        index += 1;
-        updateText()
+        playerTurnsCount += 1;
+        updatePlayerName()
     }
     
 }
