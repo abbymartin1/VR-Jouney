@@ -11,7 +11,10 @@ import UIKit
 class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.backItem?.title = "Back"
+        self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "back_image")
+        self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "back_image")
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
     }
     
 //    @IBAction func scoreBoardTapped(_ sender: Any) {
