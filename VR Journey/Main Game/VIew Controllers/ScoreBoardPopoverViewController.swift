@@ -15,6 +15,10 @@ class ScoreBoardPopoverViewController: UIViewController {
     //Properties
     let playersNames = ["Player One", "Player Two", "Player Three", "Player Four"]
     let playersImages = [#imageLiteral(resourceName: "IMG_1878"), #imageLiteral(resourceName: "logo Orange "), #imageLiteral(resourceName: "Logo Grey"), #imageLiteral(resourceName: "Logo White")]
+    var mentalPoints = [0,0,0,0]
+    var enviromentalPoints = [0,0,0,0]
+    var physicalPoints = [0,0,0,0]
+    var societalPoints = [0,0,0,0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +42,10 @@ extension ScoreBoardPopoverViewController: UITableViewDataSource, UITableViewDel
         }
         cell.playerImage.image = playersImages[indexPath.row]
         cell.playerNameImage.text = playersNames[indexPath.row]
-        //TODO: Add stuff for number of points player is getting
+        cell.mentalPointsLabel.text = "🧠 : " + String(mentalPoints[indexPath.row])
+        cell.enviromentalPointsLabel.text = "🍃: " + String(enviromentalPoints[indexPath.row])
+        cell.physicalPointslabel.text = "🦴: " + String(physicalPoints[indexPath.row])
+        cell.globalPointsLabel.text = "🌍: " + String(societalPoints[indexPath.row])
         return cell;
     }
     
@@ -47,6 +54,6 @@ extension ScoreBoardPopoverViewController: UITableViewDataSource, UITableViewDel
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        return 100
     }
 }
