@@ -11,14 +11,17 @@ import UIKit
 class ScoreBoardPopoverViewController: UIViewController {
     //Outlets
     @IBOutlet var playerScoresTableView: UITableView!
+    @IBOutlet var entireView: UIStackView!
     
     //Properties
-    let playersNames = ["Player One", "Player Two", "Player Three", "Player Four"]
-    let playersImages = [#imageLiteral(resourceName: "IMG_1878"), #imageLiteral(resourceName: "logo Orange "), #imageLiteral(resourceName: "Logo Grey"), #imageLiteral(resourceName: "Logo White")]
+    var playersNames = ["Player One", "Player Two", "Player Three", "Player Four"]
+    var playersImages = [#imageLiteral(resourceName: "IMG_1878"), #imageLiteral(resourceName: "logo Orange "), #imageLiteral(resourceName: "Logo Grey"), #imageLiteral(resourceName: "Logo White")]
     var mentalPoints = [0,0,0,0]
     var enviromentalPoints = [0,0,0,0]
     var physicalPoints = [0,0,0,0]
     var societalPoints = [0,0,0,0]
+    var moneyPoints = [0,0,0,0]
+    var spotsToMove = [0,0,0,0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +49,8 @@ extension ScoreBoardPopoverViewController: UITableViewDataSource, UITableViewDel
         cell.enviromentalPointsLabel.text = "🍃: " + String(enviromentalPoints[indexPath.row])
         cell.physicalPointslabel.text = "🦴: " + String(physicalPoints[indexPath.row])
         cell.globalPointsLabel.text = "🌍: " + String(societalPoints[indexPath.row])
+        cell.moneyPointsLabel.text = "💵: $" + String(moneyPoints[indexPath.row])
+        cell.spotsToMoveLabel.text = String(spotsToMove[indexPath.row])
         return cell;
     }
     

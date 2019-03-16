@@ -34,7 +34,7 @@
         <!--Menu-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MenuViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MenuViewController" customModule="VR_Journey" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -47,7 +47,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AuO-91-fw3">
-                                <rect key="frame" x="8" y="488" width="398" height="50"/>
+                                <rect key="frame" x="8" y="546" width="398" height="50"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="QcQ-L2-VhU"/>
@@ -73,20 +73,8 @@
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Ezc-ac-CpE" kind="show" id="yTf-sG-22a"/>
+                                    <action selector="selectPlayersPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gkp-Qt-oeH"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2z-VB-Bbv">
-                                <rect key="frame" x="8" y="546" width="398" height="50"/>
-                                <color key="backgroundColor" red="0.17412886991718701" green="0.17412886991718701" blue="0.17412886991718701" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="R6A-Rf-YD9"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Score Board">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iLX-QC-Wld">
                                 <rect key="frame" x="8" y="662" width="398" height="50"/>
@@ -100,30 +88,31 @@
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="eVC-ED-7Ab" kind="show" id="HQb-rA-1mA"/>
+                                    <action selector="playButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kic-iX-p4v"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="AuO-91-fw3" firstAttribute="top" secondItem="ixF-dh-ozc" secondAttribute="bottom" constant="50" id="0ox-H8-ZIe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iLX-QC-Wld" secondAttribute="bottom" constant="150" id="4nh-xA-sFb"/>
                             <constraint firstItem="ixF-dh-ozc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Ur-sI-4EN"/>
                             <constraint firstItem="ixF-dh-ozc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="7cL-Pb-iVc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AuO-91-fw3" secondAttribute="trailing" constant="8" id="COk-Rm-CGB"/>
                             <constraint firstItem="iLX-QC-Wld" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Hy1-ef-2pZ"/>
-                            <constraint firstItem="Z2z-VB-Bbv" firstAttribute="top" secondItem="AuO-91-fw3" secondAttribute="bottom" constant="8" id="XUV-CU-0us"/>
-                            <constraint firstItem="Mcm-l4-HdF" firstAttribute="top" secondItem="Z2z-VB-Bbv" secondAttribute="bottom" constant="8" id="dVb-Fq-JXZ"/>
+                            <constraint firstItem="Mcm-l4-HdF" firstAttribute="top" secondItem="AuO-91-fw3" secondAttribute="bottom" constant="8" id="fWp-DY-7WX"/>
                             <constraint firstItem="iLX-QC-Wld" firstAttribute="top" secondItem="Mcm-l4-HdF" secondAttribute="bottom" constant="8" id="iKh-5t-KRA"/>
                             <constraint firstItem="AuO-91-fw3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="lDA-xA-DgI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mcm-l4-HdF" secondAttribute="trailing" constant="8" id="oAQ-Sx-iDu"/>
                             <constraint firstItem="Mcm-l4-HdF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="qCH-zA-3WA"/>
-                            <constraint firstItem="Z2z-VB-Bbv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="v28-ce-vN2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iLX-QC-Wld" secondAttribute="trailing" constant="8" id="x9z-ow-bpJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z2z-VB-Bbv" secondAttribute="trailing" constant="8" id="xST-qq-7Oy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Menu" id="IHR-vT-6E0"/>
+                    <connections>
+                        <segue destination="Ezc-ac-CpE" kind="show" identifier="selectPlayers" id="HDo-Xw-BOf"/>
+                        <segue destination="eVC-ED-7Ab" kind="show" identifier="playGame" id="tkd-LN-ubA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

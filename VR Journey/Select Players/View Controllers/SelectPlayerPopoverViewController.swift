@@ -6,6 +6,10 @@
 //  Copyright © 2019 Abby Martin. All rights reserved.
 //
 
+protocol selectPlayerDelegate {
+    func updatePlayerNames(playerIndex: Int, playerName: String, playerCategory: categories, playerImage: UIImage)
+}
+
 import UIKit
 
 class SelectPlayerPopoverViewController: UIViewController {
@@ -19,8 +23,11 @@ class SelectPlayerPopoverViewController: UIViewController {
     //MARK: Properties
     private let reuseIdentifier = "selectPlayersPopoverCell"
     var selectedCell = 0;
-    let playerTypes = ["Gaming Industry", "Travel Industry", "Medical Industry", "Other Industry"];
-    let playerImages = [#imageLiteral(resourceName: "IMG_1878"), #imageLiteral(resourceName: "logo Orange "), #imageLiteral(resourceName: "Logo Grey"), #imageLiteral(resourceName: "Logo White")];
+    let playerTypes = ["Gaming", "Travel", "Medical", "Education"];
+    let playerImages = [#imageLiteral(resourceName: "game icon"), #imageLiteral(resourceName: "plane icon"), #imageLiteral(resourceName: "medical icon"), #imageLiteral(resourceName: "edu icon")];
+    var delegate: selectPlayerDelegate?
+    var selectedImage: UIImage?
+    var selectedCategory: categories?
     
     //MARK: Overrides
     override func viewDidLoad() {
@@ -28,10 +35,17 @@ class SelectPlayerPopoverViewController: UIViewController {
         personaImageCollectionView.delegate = self
         personaImageCollectionView.dataSource = self
         setUpUI()
+        //will cause to tap notinterfere and cancel other interactions.
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
+        tapGesture.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
+        playerNameTextField.resignFirstResponder()
     }
     
     //MARK: Methods
-    
     func setUpUI() {
         //set title
         switch selectedCell {
@@ -50,7 +64,30 @@ class SelectPlayerPopoverViewController: UIViewController {
     
     //MARK: Actions
     @IBAction func doneButtonTapped(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        //save name for player pod
+        if (playerNameTextField.text != "" && selectedImage != nil && selectedCategory != nil) {
+            self.delegate?.updatePlayerNames(playerIndex: selectedCell, playerName: playerNameTextField.text ?? "", playerCategory: selectedCategory!, playerImage: selectedImage ?? #imageLiteral(resourceName: "Logo Grey"))
+            dismiss(animated: true, completion: nil)
+        } else {
+            //show popover telling user to enter name and select category
+            var alertTitle = ""
+            var alertMessage = ""
+            if (playerNameTextField.text == "") {
+                alertTitle = "No Name Entered"
+                alertMessage = "Please enter a name to continue"
+            } else if (selectedImage == nil) {
+                alertTitle = "No Category Selected"
+                alertMessage = "Please select a categoy for user to continue."
+            }
+            let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func cancelSelected(_ sender: Any) {
+        //just dismiss don't pass any info back
+         dismiss(animated: true, completion: nil)
     }
 }
 
@@ -64,11 +101,43 @@ extension SelectPlayerPopoverViewController: UICollectionViewDelegate, UICollect
         cell.backgroundColor = .black
         cell.playersName.text = playerTypes[indexPath.row]
         cell.playersImage.image = playerImages[indexPath.row]
+//        if cell.isSelected {
+//            cell.layer.borderWidth = 2.0
+//            cell.layer.borderColor = UIColor.yellow.cgColor
+//        } else {
+//            cell.layer.borderWidth = 0
+//        }
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //TODO: Display popup allowing user to pick their player and set name
+        switch indexPath.row {
+        case 0:
+            selectedImage = #imageLiteral(resourceName: "game icon")
+            selectedCategory = .gaming
+        case 1:
+            selectedImage = #imageLiteral(resourceName: "plane icon")
+            selectedCategory = .tourism
+        case 2:
+            selectedImage = #imageLiteral(resourceName: "medical icon")
+            selectedCategory = .medical
+        case 3:
+            selectedImage = #imageLiteral(resourceName: "edu icon")
+            selectedCategory = .education
+        default:
+            return
+        }
+        for index in 0...3 {
+            //remove border of all other cells
+            if index != indexPath.row {
+                let cell = collectionView.cellForItem(at: IndexPath(row: index, section: 0))
+                cell?.layer.borderWidth = 0
+            } else {
+                let cell = collectionView.cellForItem(at: indexPath)
+                cell?.layer.borderWidth = 2.0
+                cell?.layer.borderColor = UIColor.yellow.cgColor
+            }
+        }
     }
     
 }
