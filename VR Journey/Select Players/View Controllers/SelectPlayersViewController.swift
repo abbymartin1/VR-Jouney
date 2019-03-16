@@ -8,21 +8,34 @@
 
 import UIKit
 
+enum categories {
+    case gaming
+    case education
+    case tourism
+    case medical
+}
+
+protocol playerInformationDelegate {
+    func updatePlayerInfo(playerNames: [String], playerCategories: [categories], playerImages: [UIImage])
+}
+
 class SelectPlayersViewController: UIViewController {
-    
     //MARK: Outlets
     @IBOutlet var selectNumberPlayersTextField: UITextField!
     @IBOutlet var playersCollectionView: UICollectionView!
     
     //MARK: Properties
     let numberOfPickerElements = 3
-    let playerCellArray = ["Player 1", "Player 2", "Player 3", "Player 4"]
-    let playerDefaultImageArray = [#imageLiteral(resourceName: "VR Journey"), #imageLiteral(resourceName: "VR Journey"), #imageLiteral(resourceName: "VR Journey"), #imageLiteral(resourceName: "VR Journey")]
+    var playerCellArray = ["Player 1", "Player 2", "Player 3", "Player 4"]
+    var playerCategories: [categories] = [.gaming, .education, .tourism, .medical]
+    var playerImageArray = [#imageLiteral(resourceName: "VR Journey"), #imageLiteral(resourceName: "VR Journey"), #imageLiteral(resourceName: "VR Journey"), #imageLiteral(resourceName: "VR Journey")]
     let numberOfPlayerArray = ["2", "3", "4"]
     let numberPlayerPicker = UIPickerView()
     private let reuseIdentifier = "SelectPlayerCell"
     private let numberPlayersIdentifier = "NumberOfPlayers"
-    var selectedPlayer = 0;
+    var selectedPlayer = 0
+    var numberOfPlayersInfoEnteredFor = 0
+    var delegate: playerInformationDelegate?
     
     //MARK: Overloads
     override func viewDidLoad() {
@@ -39,12 +52,19 @@ class SelectPlayersViewController: UIViewController {
         if (segue.identifier == "displayPopover") {
             let vc = segue.destination as! SelectPlayerPopoverViewController
             vc.selectedCell = selectedPlayer
+            vc.delegate = self
         }
     }
     
     //MARK: Actions
     @IBAction func continueButtonTapped(_ sender: Any) {
-        //save the user info and go back to menu
+        if numberOfPlayersInfoEnteredFor < 4 {
+            let alert = UIAlertController(title: "Not All Players Selected", message: "Please click each player and enter their name and category to continue.", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        } else {
+            self.delegate?.updatePlayerInfo(playerNames: playerCellArray, playerCategories: playerCategories, playerImages: playerImageArray)
+        }
     }
 }
 
@@ -67,7 +87,6 @@ extension SelectPlayersViewController: UIPickerViewDelegate, UIPickerViewDataSou
         UserDefaults.standard.set(row, forKey: numberPlayersIdentifier)
         self.view.endEditing(true)
     }
-    
 }
 
 extension SelectPlayersViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -78,7 +97,7 @@ extension SelectPlayersViewController: UICollectionViewDelegate, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = playersCollectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! SelectPlayerCollectionViewCell
         cell.backgroundColor = .black
-        cell.playersImage.image = playerDefaultImageArray[indexPath.row]
+        cell.playersImage.image = playerImageArray[indexPath.row]
         cell.playersName.text = playerCellArray[indexPath.row]
         return cell
     }
@@ -103,5 +122,15 @@ extension SelectPlayersViewController: UICollectionViewDelegate, UICollectionVie
             selectedPlayer = 0;
         }
         performSegue(withIdentifier: "displayPopover", sender: nil)
+    }
+}
+
+extension SelectPlayersViewController: selectPlayerDelegate {
+    func updatePlayerNames(playerIndex: Int, playerName: String, playerCategory: categories, playerImage: UIImage) {
+        numberOfPlayersInfoEnteredFor += 1;
+        playerCellArray[playerIndex] = playerName
+        playerImageArray[playerIndex] = playerImage
+        playerCategories[playerIndex] = playerCategory
+        playersCollectionView.reloadData()
     }
 }

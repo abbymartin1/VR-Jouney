@@ -16,7 +16,7 @@ class PersonasViewController: UIViewController {
     //MARK: Properties
     let personaTitleArray = ["Gaming", "Travel/Planning", "Medical", "Education"]
     let personaDescriptionArray = ["Gaming Description", "Travel/Planning Description", "Medical Description", "EDU Description"]
-    let personaImageArray = [#imageLiteral(resourceName: "logo Orange "), #imageLiteral(resourceName: "Logo Grey"), #imageLiteral(resourceName: "IMG_1878"), #imageLiteral(resourceName: "Logo White")]
+    let personaImageArray = [#imageLiteral(resourceName: "game icon"), #imageLiteral(resourceName: "plane icon"), #imageLiteral(resourceName: "medical icon"), #imageLiteral(resourceName: "edu icon")]
     let cellIdentifier = "PersonaTableViewCell";
     
     //MARK: Overrides

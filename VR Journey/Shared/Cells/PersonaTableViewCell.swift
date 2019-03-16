@@ -30,6 +30,5 @@ class PersonaTableViewCell: UITableViewCell {
         personImageView.layer.masksToBounds = false
         personImageView.layer.cornerRadius = personImageView.frame.height/2
         personImageView.clipsToBounds = true
-        
     }
 }

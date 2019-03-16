@@ -19,18 +19,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CoG-ve-w1J">
-                                <rect key="frame" x="40" y="84" width="334" height="578"/>
+                                <rect key="frame" x="40" y="84" width="334" height="478"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Learning Objectives 
 
 
-1. You will learn XX
+1. Learn about different applications of VR
 
-2. You will learn Y
+2. Learn about enviromental and social impacts of VR
 
-3. You will learn Z
+3. Make decisions and see how your choices affect different categories 
 
-4. You will learn W
 </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -57,7 +56,7 @@
                             <constraint firstItem="CoG-ve-w1J" firstAttribute="leading" secondItem="oom-cf-GxS" secondAttribute="leading" constant="40" id="aO4-P3-HMA"/>
                             <constraint firstItem="06a-19-Bbp" firstAttribute="leading" secondItem="oom-cf-GxS" secondAttribute="leading" constant="8" id="b8X-Am-Kyy"/>
                             <constraint firstItem="oom-cf-GxS" firstAttribute="trailing" secondItem="CoG-ve-w1J" secondAttribute="trailing" constant="40" id="mU1-dC-sC2"/>
-                            <constraint firstItem="oom-cf-GxS" firstAttribute="bottom" secondItem="CoG-ve-w1J" secondAttribute="bottom" constant="200" id="xJg-7s-k2b"/>
+                            <constraint firstItem="oom-cf-GxS" firstAttribute="bottom" secondItem="CoG-ve-w1J" secondAttribute="bottom" constant="300" id="xJg-7s-k2b"/>
                             <constraint firstItem="oom-cf-GxS" firstAttribute="trailing" secondItem="06a-19-Bbp" secondAttribute="trailing" constant="8" id="zbA-8Q-x91"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oom-cf-GxS"/>
@@ -170,18 +169,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vns-ma-mJO">
-                                <rect key="frame" x="40" y="84" width="334" height="568"/>
+                                <rect key="frame" x="40" y="84" width="334" height="618"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Game Rules
 
+1. Goal of the game is to get to the end of the map while gaining the most points and not running out of money
 
-1. Rule Number 1
+2. You must select a choice each turn and this choice will gain/lose you points and money
 
-2. Rule Number 2
+3. If you run out of money, or don't make it out of te section in time you will be eliminated
 
-3. Rule Number 3
-
-4. Rule Number 4
+4. In order to win you need to have the most points and still have money
 </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -209,7 +207,7 @@
                             <constraint firstItem="IfJ-tl-MF1" firstAttribute="trailing" secondItem="U76-fs-bht" secondAttribute="trailing" constant="8" id="Wrl-bs-Qp0"/>
                             <constraint firstItem="IfJ-tl-MF1" firstAttribute="bottom" secondItem="U76-fs-bht" secondAttribute="bottom" constant="10" id="XXb-DU-eCk"/>
                             <constraint firstItem="U76-fs-bht" firstAttribute="leading" secondItem="IfJ-tl-MF1" secondAttribute="leading" constant="8" id="h8N-aH-Lff"/>
-                            <constraint firstItem="U76-fs-bht" firstAttribute="bottom" secondItem="Vns-ma-mJO" secondAttribute="bottom" constant="200" id="oPa-0j-cng"/>
+                            <constraint firstItem="U76-fs-bht" firstAttribute="bottom" secondItem="Vns-ma-mJO" secondAttribute="bottom" constant="150" id="oPa-0j-cng"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IfJ-tl-MF1"/>
                     </view>

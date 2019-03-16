@@ -19,6 +19,7 @@
 		B18B9B73221F226F005BAC17 /* SelectPlayerPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18B9B72221F226F005BAC17 /* SelectPlayerPopoverViewController.swift */; };
 		B1A57CE3222CE49200AB083E /* ScoreBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A57CE2222CE49200AB083E /* ScoreBoardTableViewCell.swift */; };
 		B1A57CE5222CE74F00AB083E /* ScoreBoardPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A57CE4222CE74F00AB083E /* ScoreBoardPopoverViewController.swift */; };
+		B1A57D172238385A00AB083E /* CongratulationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A57D162238385A00AB083E /* CongratulationsViewController.swift */; };
 		B1F2977C220E2E8E00BBCBD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F2977B220E2E8E00BBCBD6 /* AppDelegate.swift */; };
 		B1F2977E220E2E8E00BBCBD6 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F2977D220E2E8E00BBCBD6 /* MenuViewController.swift */; };
 		B1F29781220E2E8E00BBCBD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1F2977F220E2E8E00BBCBD6 /* Main.storyboard */; };
@@ -61,6 +62,7 @@
 		B18B9B72221F226F005BAC17 /* SelectPlayerPopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPlayerPopoverViewController.swift; sourceTree = "<group>"; };
 		B1A57CE2222CE49200AB083E /* ScoreBoardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardTableViewCell.swift; sourceTree = "<group>"; };
 		B1A57CE4222CE74F00AB083E /* ScoreBoardPopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardPopoverViewController.swift; sourceTree = "<group>"; };
+		B1A57D162238385A00AB083E /* CongratulationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsViewController.swift; sourceTree = "<group>"; };
 		B1F29778220E2E8E00BBCBD6 /* VR Journey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VR Journey.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1F2977B220E2E8E00BBCBD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1F2977D220E2E8E00BBCBD6 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			children = (
 				B1F297B0220E3C6800BBCBD6 /* GameViewController .swift */,
 				B1A57CE4222CE74F00AB083E /* ScoreBoardPopoverViewController.swift */,
+				B1A57D162238385A00AB083E /* CongratulationsViewController.swift */,
 			);
 			name = "View Controllers";
 			path = "VIew Controllers";
@@ -444,6 +447,7 @@
 				B1A57CE3222CE49200AB083E /* ScoreBoardTableViewCell.swift in Sources */,
 				B1F2977E220E2E8E00BBCBD6 /* MenuViewController.swift in Sources */,
 				B18B9B71221F1C29005BAC17 /* PersonaImageCollectionViewCell.swift in Sources */,
+				B1A57D172238385A00AB083E /* CongratulationsViewController.swift in Sources */,
 				B18B9B5A221CB800005BAC17 /* SelectPlayerCollectionViewCell.swift in Sources */,
 				B1A57CE5222CE74F00AB083E /* ScoreBoardPopoverViewController.swift in Sources */,
 				B1F2977C220E2E8E00BBCBD6 /* AppDelegate.swift in Sources */,

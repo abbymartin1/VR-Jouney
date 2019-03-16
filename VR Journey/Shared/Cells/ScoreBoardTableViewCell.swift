@@ -16,6 +16,8 @@ class ScoreBoardTableViewCell: UITableViewCell {
     @IBOutlet var enviromentalPointsLabel: UILabel!
     @IBOutlet var physicalPointslabel: UILabel!
     @IBOutlet var globalPointsLabel: UILabel!
+    @IBOutlet var moneyPointsLabel: UILabel!
+    @IBOutlet var spotsToMoveLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
