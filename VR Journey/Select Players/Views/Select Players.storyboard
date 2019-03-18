@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zRr-Sz-Ynr">
-    <device id="retina6_1" orientation="portrait">
+    <device id="ipad10_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,47 +15,47 @@
             <objects>
                 <viewController title="Select Players" id="zRr-Sz-Ynr" customClass="SelectPlayersViewController" customModule="VR_Journey" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HHO-DM-cg1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="87O-sP-kSH">
-                                <rect key="frame" x="20" y="133" width="374" height="30"/>
+                                <rect key="frame" x="20" y="109" width="794" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Players:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5V-4E-5l1">
-                                <rect key="frame" x="20" y="104" width="354" height="21"/>
+                                <rect key="frame" x="20" y="80" width="774" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0jO-Cm-Ux7">
-                                <rect key="frame" x="40" y="224" width="334" height="508"/>
+                                <rect key="frame" x="40" y="200" width="754" height="782"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="5" id="ex1-8q-0gb">
-                                    <size key="itemSize" width="160" height="160"/>
+                                    <size key="itemSize" width="285" height="285"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SelectPlayerCell" id="543-xZ-YEr" customClass="SelectPlayerCollectionViewCell" customModule="VR_Journey" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="285" height="285"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="285" height="285"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="VR Journey" translatesAutoresizingMaskIntoConstraints="NO" id="57A-c0-K9p">
-                                                    <rect key="frame" x="12.5" y="0.0" width="135" height="135"/>
+                                                    <rect key="frame" x="22.5" y="0.0" width="240" height="240"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="135" id="Izf-ZH-0Io"/>
-                                                        <constraint firstAttribute="width" constant="135" id="ppd-uU-Hxd"/>
+                                                        <constraint firstAttribute="height" constant="240" id="Izf-ZH-0Io"/>
+                                                        <constraint firstAttribute="width" constant="240" id="ppd-uU-Hxd"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RVg-6R-761">
-                                                    <rect key="frame" x="0.0" y="139" width="160" height="21"/>
+                                                    <rect key="frame" x="0.0" y="244" width="285" height="41"/>
                                                     <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -80,7 +80,7 @@
                                 </cells>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcX-KD-Aa6">
-                                <rect key="frame" x="8" y="782" width="398" height="50"/>
+                                <rect key="frame" x="8" y="1032" width="818" height="50"/>
                                 <color key="backgroundColor" red="0.16042725190000001" green="0.16042725190000001" blue="0.16042725190000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="S7U-cq-35g"/>
@@ -95,7 +95,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Players" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSL-rb-4ec">
-                                <rect key="frame" x="20" y="183" width="354" height="21"/>
+                                <rect key="frame" x="20" y="159" width="774" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -130,21 +130,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="okp-d3-lo3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-207.24637681159422" y="20.758928571428569"/>
+            <point key="canvasLocation" x="-207.91366906474821" y="20.50359712230216"/>
         </scene>
         <!--Select Player Popover View Controller-->
         <scene sceneID="nne-au-WTQ">
             <objects>
                 <viewController id="XdN-mc-OKr" customClass="SelectPlayerPopoverViewController" customModule="VR_Journey" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lt4-2b-p4D">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SH3-bx-Q40">
-                                <rect key="frame" x="20" y="124" width="374" height="568"/>
+                                <rect key="frame" x="20" y="100" width="794" height="842"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AnS-Kb-JWN">
-                                        <rect key="frame" x="8" y="80" width="358" height="30"/>
+                                        <rect key="frame" x="8" y="80" width="778" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -156,14 +156,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bsl-QN-khh">
-                                        <rect key="frame" x="8" y="520" width="358" height="40"/>
-                                        <color key="backgroundColor" red="0.25097686050000001" green="0.25097858909999998" blue="0.25098297000000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <rect key="frame" x="8" y="794" width="778" height="40"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Gc1-5N-3vg"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Done">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="doneButtonTapped:" destination="XdN-mc-OKr" eventType="touchUpInside" id="BGv-Di-Cff"/>
@@ -176,7 +176,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i3x-5D-ui3">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="794" height="40"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1v-Fn-hbE">
                                                 <rect key="frame" x="0.0" y="0.0" width="70" height="40"/>
@@ -193,7 +193,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Set-Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWZ-fc-2IG">
-                                                <rect key="frame" x="120.5" y="7" width="133.5" height="26.5"/>
+                                                <rect key="frame" x="330.5" y="7" width="133.5" height="26.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -210,36 +210,36 @@
                                         </constraints>
                                     </view>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5WY-bP-UjF">
-                                        <rect key="frame" x="20" y="147" width="334" height="353"/>
+                                        <rect key="frame" x="20" y="147" width="754" height="627"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eW1-bJ-HjC">
-                                            <size key="itemSize" width="162" height="162"/>
+                                            <size key="itemSize" width="285" height="285"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="selectPlayersPopoverCell" id="HqF-GB-vM8" customClass="SelectPlayerPopoverCollectionViewCell" customModule="VR_Journey" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="162" height="162"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="285" height="285"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="162" height="162"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="285" height="285"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo Orange " translatesAutoresizingMaskIntoConstraints="NO" id="j31-SW-Qsl">
-                                                            <rect key="frame" x="13.5" y="2" width="135" height="135"/>
+                                                            <rect key="frame" x="22.5" y="5" width="240" height="240"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="135" id="TqZ-4O-d66"/>
-                                                                <constraint firstAttribute="height" constant="135" id="wzZ-mY-hS2"/>
+                                                                <constraint firstAttribute="width" constant="240" id="TqZ-4O-d66"/>
+                                                                <constraint firstAttribute="height" constant="240" id="wzZ-mY-hS2"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gaming " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEU-5S-sqD">
-                                                            <rect key="frame" x="0.0" y="137" width="162" height="25"/>
+                                                            <rect key="frame" x="0.0" y="245" width="285" height="40"/>
                                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="25" id="0sZ-cI-y3Y"/>
+                                                                <constraint firstAttribute="height" constant="40" id="0sZ-cI-y3Y"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -301,7 +301,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbs-be-xvx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="698.55072463768124" y="20.758928571428569"/>
+            <point key="canvasLocation" x="697.84172661870514" y="20.50359712230216"/>
         </scene>
         <!--Main-->
         <scene sceneID="MNa-8W-BWs">

@@ -66,9 +66,16 @@ class CongratulationsViewController: UIViewController {
     }
     
     func setUpUI() {
-        levelMessage.text = "Congrats on making it to level \(currentUsersStageIndex + 1)!"
-        congratsLabel.text = "Congrats!"
-        stageImageView.image = sectionImages[currentUsersStageIndex]
+        if currentUsersStageIndex > 3 {
+            //user has finished the game
+            levelMessage.text = "Congrats on making it to the end of the game!"
+            congratsLabel.text = "Congrats!"
+            stageImageView.image = sectionImages[4]
+        } else {
+            levelMessage.text = "Congrats on making it to level \(currentUsersStageIndex + 1)!"
+            congratsLabel.text = "Congrats!"
+            stageImageView.image = sectionImages[currentUsersStageIndex]
+        }
     }
     
     //MARK: Actions
