@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		B11D0CEB221AFB4F00E594B8 /* PersonaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11D0CEA221AFB4F00E594B8 /* PersonaTableViewCell.swift */; };
+		B14D8CD022415692007450F2 /* GameInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14D8CCF22415692007450F2 /* GameInfoViewController.swift */; };
+		B14D8CD2224156F5007450F2 /* MoreGameInfoViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14D8CD1224156F5007450F2 /* MoreGameInfoViewControllers.swift */; };
 		B169DCD4221A2CBA00E39BE3 /* LearningObjectivesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B169DCD3221A2CBA00E39BE3 /* LearningObjectivesViewController.swift */; };
 		B169DCD6221A2CD400E39BE3 /* Game Setup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B169DCD5221A2CD400E39BE3 /* Game Setup.storyboard */; };
-		B169DCD8221A31DC00E39BE3 /* PersonasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B169DCD7221A31DC00E39BE3 /* PersonasViewController.swift */; };
-		B169DCDA221A31E900E39BE3 /* GameRulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B169DCD9221A31E900E39BE3 /* GameRulesViewController.swift */; };
 		B18B9B56221C9BA9005BAC17 /* Select Players.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B18B9B55221C9BA9005BAC17 /* Select Players.storyboard */; };
 		B18B9B58221C9BC3005BAC17 /* SelectPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18B9B57221C9BC3005BAC17 /* SelectPlayersViewController.swift */; };
 		B18B9B5A221CB800005BAC17 /* SelectPlayerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18B9B59221CB800005BAC17 /* SelectPlayerCollectionViewCell.swift */; };
@@ -51,10 +51,10 @@
 
 /* Begin PBXFileReference section */
 		B11D0CEA221AFB4F00E594B8 /* PersonaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonaTableViewCell.swift; sourceTree = "<group>"; };
+		B14D8CCF22415692007450F2 /* GameInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfoViewController.swift; sourceTree = "<group>"; };
+		B14D8CD1224156F5007450F2 /* MoreGameInfoViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreGameInfoViewControllers.swift; sourceTree = "<group>"; };
 		B169DCD3221A2CBA00E39BE3 /* LearningObjectivesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningObjectivesViewController.swift; sourceTree = "<group>"; };
 		B169DCD5221A2CD400E39BE3 /* Game Setup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Game Setup.storyboard"; sourceTree = "<group>"; };
-		B169DCD7221A31DC00E39BE3 /* PersonasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonasViewController.swift; sourceTree = "<group>"; };
-		B169DCD9221A31E900E39BE3 /* GameRulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRulesViewController.swift; sourceTree = "<group>"; };
 		B18B9B55221C9BA9005BAC17 /* Select Players.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Select Players.storyboard"; sourceTree = "<group>"; };
 		B18B9B57221C9BC3005BAC17 /* SelectPlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPlayersViewController.swift; sourceTree = "<group>"; };
 		B18B9B59221CB800005BAC17 /* SelectPlayerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPlayerCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -157,8 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				B169DCD3221A2CBA00E39BE3 /* LearningObjectivesViewController.swift */,
-				B169DCD7221A31DC00E39BE3 /* PersonasViewController.swift */,
-				B169DCD9221A31E900E39BE3 /* GameRulesViewController.swift */,
+				B14D8CCF22415692007450F2 /* GameInfoViewController.swift */,
+				B14D8CD1224156F5007450F2 /* MoreGameInfoViewControllers.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -449,7 +449,9 @@
 				B18B9B71221F1C29005BAC17 /* PersonaImageCollectionViewCell.swift in Sources */,
 				B1A57D172238385A00AB083E /* CongratulationsViewController.swift in Sources */,
 				B18B9B5A221CB800005BAC17 /* SelectPlayerCollectionViewCell.swift in Sources */,
+				B14D8CD2224156F5007450F2 /* MoreGameInfoViewControllers.swift in Sources */,
 				B1A57CE5222CE74F00AB083E /* ScoreBoardPopoverViewController.swift in Sources */,
+				B14D8CD022415692007450F2 /* GameInfoViewController.swift in Sources */,
 				B1F2977C220E2E8E00BBCBD6 /* AppDelegate.swift in Sources */,
 				B18B9B73221F226F005BAC17 /* SelectPlayerPopoverViewController.swift in Sources */,
 				B18B9B58221C9BC3005BAC17 /* SelectPlayersViewController.swift in Sources */,
@@ -457,8 +459,6 @@
 				B11D0CEB221AFB4F00E594B8 /* PersonaTableViewCell.swift in Sources */,
 				B1F297B1220E3C6800BBCBD6 /* GameViewController .swift in Sources */,
 				B169DCD4221A2CBA00E39BE3 /* LearningObjectivesViewController.swift in Sources */,
-				B169DCDA221A31E900E39BE3 /* GameRulesViewController.swift in Sources */,
-				B169DCD8221A31DC00E39BE3 /* PersonasViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

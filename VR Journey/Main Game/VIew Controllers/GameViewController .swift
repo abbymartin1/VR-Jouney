@@ -23,6 +23,10 @@ class GameViewController: UIViewController {
     var playerNames = ["Player 1","Player 2","Player 3","Player 4"]
     var playerCategories: [categories] = [.gaming, .education, .tourism, .medical]
     var playerImageArray = [#imageLiteral(resourceName: "VR Journey"), #imageLiteral(resourceName: "VR Journey"), #imageLiteral(resourceName: "VR Journey"), #imageLiteral(resourceName: "VR Journey")]
+    var isCongrats = true
+    var currentNumberOfPlayers = 3
+    var shouldShowScoreBoard = false
+    var shouldShowRemovePlayer = false
     
     //points which will correspond to each player
     var mentalPoints = [0,0,0,0]
@@ -34,6 +38,7 @@ class GameViewController: UIViewController {
     var playerTotalSpotsOnBoard = [0,0,0,0]
     var playerSection = [0,0,0,0]
     var sectionSpots = [6,6,4,4]
+    var playerTurnCount = [0,0,0,0]
     
     //intro
     let descriptionText = ["You are a founder who created a VR company. You will start with $25000 and can gain or lose money based on your choices. Choices you make could have potential impacts on society, users physical and mental health, and the enviroment. You will gain or lose points in different categories based on your choices. Each player must select 'Okay' once they are ready to begin.", "Virtual reality systems can be used to model and display various situations. For example, how an ecosystem might be impacted by a new building, how a complicated surgery would progress, or how a certain remote/tourist destination might look. As you are designing your product you need to decide how industry specific you want it to be. How many different applications do you want your product to be designed for?", "Researchers and medical professionals have found many applications for Virtual Reality to help improve motor functions in people with Cerebral Palsy, balance and locomotion in children with Down Syndrome and social skills in young adults with high functioning Autism. You have the choice to make a commercial product that is geared towards the general population, or you can develop a product that helps people with disabilities (PWD). How do you want to focus your product?", "As you are designing your product you have the idea to gamify it. Products that include violence and mature material will be more exciting and appealing to users, however you must remember that your main users will be ages 12-22. Your lead researcher informs you that since the user will have to actively participate in the violence, this causes the user to have aggressive action directly incorporated into their behaviour repertoire [1]. Do you choose to have violence and mature material in your game?", "As you are designing the concept behind your business, you read a newspaper article on the lack of e-waste recycling programs that accept the electronic parts that your VR system will be made of. You have the choice of creating your own e-waste program where users could return the product once it is broken or unwanted. You would then be in charge of properly recycling it. VR devices contain valuable metals such as copper and platinum, as well as potential environmental contaminants including lead and nickel [3]. In order to implement this program it would cost you money but would be better for the environment. Do you choose to implement it?", "Making your VR product portable so that it can be used in a wide range of environments allows for therapy or evaluation to occur in the office, at bedside, or even at home, broadly increasing delivery options. However, a portable design will involve smaller, light weight and more expensive components. Will you increase the accessibility of your product by making it portable?", "As the concept for your VR product is starting to come together, you have to pick a theme for the graphics. You can choose to make them extremely realistic, or create a fictitious setting. As you are doing research about the different types of graphics you are surprised to learn that realistic VR environments has caused decreased support for environmental preservation, as users no longer feel the need to go outside and experience nature [16]. Do you want to model your graphics off of the real world, or spend more time and money creating a fictitious environment for your users to interact with?", "You have come to a critical stage in the design process where you must decide if you are going to incorporate the user’s phone into your technology. You can allow the user to connect the VR system to their phone, creating a more circular and interactive experience. All of your competitors are offering this feature however, allowing your headset to connect over wifi means that it will emit radiation. Cell phone radiation has been shown to affect the human reproductive system, disrupt sleep, cause mood swings and impose other long term health risks such as cancer. Do you choose to connect the system to user’s phone?", "You are selecting the type of screen that will be used in your VR product. You have a choice between LCD or OLED screens. OLED screens have a shorter lifespan, meaning they would need to be disposed of and replaced more often, but they have better power efficiency, higher contrast and more brightness. LCD screens last longer and are less toxic to dispose of, but they provide a lower quality experience. Which screen do you choose? ", "You have identified the need to include a hand held controller with your VR product. The controller will act as a computer mouse and allow the user to navigate through the experience. Your design team has been working very hard to optimize the size and weight of the controller, but they are going to need a three week extension in order to complete the design properly. You know that your competitors controllers are poorly designed and have been linked to upper limb disorders, and repetitive strain injury. Do you give the design team an additional three weeks to design the controller?", "You have been approached by a popular candy company who wants to strike an advertisement deal with you. They have offered to pay you a bonus for every time the ad is viewed within your VR product. Your lead researcher then approaches you and presents the idea of improving the safety of your product by including a time limit or warning on the device. This would inform users if they are at risk of negative psychological effects from playing for too long, which can include simulator sickness, disorientation, hallucination, and dissociation [12]. However, by encouraging users to keep playing the game you will gain more money from ads shown to the user. Do you choose to have a time limit warning for users?", "After deciding on the type of screen that you want to use, your team wants to discuss the physical dimensions of your product. Your lead researcher informs you that your competitors have faced a problem where the dimensions of their products were made for adults, and when children wear the ill fitting device it can lead to overstretching, walking on tip toe and potentially stumbling and falling while trying to interact with the game. Your lead researcher recommends that you create two modes, one for adults and one that adjusts the set up for children. This will require extra time and money to produce. What do you do? ", "You have arrange a meeting with your design team to select that materials that will be used for the display and shell of your VR product. You will be choosing between a less expensive, polyester based material that is non-breathable, and a high-tech composite material used in athletes running shoes. You must keep a few things in mind when making your selection: /n 1. Will your product be shared among multiple users, making cross contamination a consideration? /n 2.Will your design provide enough airflow, or will it trap the heat generated by the screen, causing the user to sweat? /n 3.Does your product encourage high intensity activity?\n Do you wish to spend more money ($1500) to research these things?", "You have the option to manufacture your product locally or in a foreign country such as China. It will be much cheaper to outsource the manufacturing to a different country, however you know that this will be worse for the environment [2] and are aware of social implications such as labour laws in different countries [2]. Do you choose to manufacture Locally or in another country?", "You are planning to invest into starting a production line of cast iron castings. By designing virtual plants, you can test production flows and how workers and robots perform tasks before changes are made in the physical world. However, as it sounds, it might not be cheap and will add additional costs into your plan. But it is crucial for productivity and efficiency. Do you plan to implement a virtual plant to plan your factory floor?", "Unfortunately, a labourer who works at your production unit was critically injured while working. You recently came across a research which discussed how VR identifies human movement captured through body motion sensors during equipment assembly with the goal of reengineering movement to decrease risk of injury and increase productivity. This has resulted in a 70% drop in employee injuries and 90% reduction in ergonomic issues. However, you have already planned and approved your company budget for the year. Do you think you will consider making an exception this time and adding the expense to integrate VR into your assembly line?", "You are creating a VR headset. It is evident that VR technology is analogous to a smartphone in terms of hardware. The typical VR Set is made up of an average 62 different types of metals. The most rare metals it uses are gold, scandium and yttrium. These are the most environmentally damaging materials in world. Will you use these materials?", "You have the option to manufacture your product locally or in a foreign country such as China. It will be much cheaper to outsource the manufacturing to a different country, however you know that this will be worse for the environment [2] and are aware of social implications such as labour laws in different countries [2]. Do you choose to manufacture Locally or in another country?", "You are planning to invest into starting a production line of cast iron castings. By designing virtual plants, you can test production flows and how workers and robots perform tasks before changes are made in the physical world. However, as it sounds, it might not be cheap and will add additional costs into your plan. But it is crucial for productivity and efficiency. Do you plan to implement a virtual plant to plan your factory floor?", "Unfortunately, a labourer who works at your production unit was critically injured while working. You recently came across a research which discussed how VR identifies human movement captured through body motion sensors during equipment assembly with the goal of reengineering movement to decrease risk of injury and increase productivity. This has resulted in a 70% drop in employee injuries and 90% reduction in ergonomic issues. However, you have already planned and approved your company budget for the year. Do you think you will consider making an exception this time and adding the expense to integrate VR into your assembly line?", "You are creating a VR headset. It is evident that VR technology is analogous to a smartphone in terms of hardware. The typical VR Set is made up of an average 62 different types of metals. The most rare metals it uses are gold, scandium and yttrium. These are the most environmentally damaging materials in world. Will you use these materials?", "Virtual Reality technology has the potential to allow students to experience new learning opportunities, but it is expensive and not within the budget of most schools. You have the opportunity to donate 6 of your systems to a local school who cannot afford technology. This will cost you money, however it will help your community. What do you choose to do?", "You are approached by a company who wants to use your VR product to bring awareness to the effects of visual impairments. By participating in their campaign you will obtain free advertising and press opportunities, however would be expected to donate 10 devices. Consider the following when you make your decision: \n1.Would your main users see or be inspired by the advertising that would be created?\n 2.Can you afford to donate 10 devices?\n3.How might this initiative impact people who have visual impairments? Do you choose to donate?", "You have been approached by the French government, and they have proposed using your product in elementary schools across France to replace field trips. Your product would be used to replace field trips while still providing a “direct experience” with the situation. In order to do this you must develop region specific versions by having your product’s text translated into French. This will cost money, however it would help you gain a global presence. Do you choose to globalize your product?", "UNICEF has approached your company which creates VR to be used in the film industry and asked you to create VR film surrounding the current crisis in Syria by following the life of a young Syrian girl living in a refugee camp, to be distributed for free around the world to get donors for the situation. They’ve stressed that it is entirely non-profit and that while they can only pay you a quarter of what you expected, the film is meant to strategically impact millions of people around the world, and help 4 million refugees. Do you agree to help them?"]
@@ -106,6 +111,10 @@ class GameViewController: UIViewController {
             } else {
                 vc.currentUsersStageIndex = playerSection[currentlySelectedPlayerIndex - 1]
             }
+            vc.shouldShowRemovePlayer = shouldShowRemovePlayer
+            vc.shouldShowScoreAfter = shouldShowScoreBoard
+            vc.delegate = self
+            vc.isCongrats = isCongrats
             vc.playerNames = playerNames
         }
     }
@@ -120,15 +129,17 @@ class GameViewController: UIViewController {
     }
     
     func updateText() {
-        if index + 1 > descriptionText.count {
+        if index + 1 > descriptionText.count || currentNumberOfPlayers <= 0 {
             //if they still have levels to go through show congrats
             //otherwise show
             titleOfMessage.text = "End of Game"
-            descriptionTextView.text = "Congrats! Add up all the points you earned to see who won"
+            descriptionTextView.text = "Congrats! You are at the end of the game. Press back to return to the menu."
             backgroundView.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
             optionOneButton.isHidden = true
             optionTwoButton.isHidden = true
-            performSegue(withIdentifier: "showScore", sender: nil)
+            isCongrats = false //is end of game
+            performSegue(withIdentifier: "showCongrats", sender: nil)
+            shouldShowScoreBoard = true
         } else {
             if index == 0 {
                 optionTwoButton.isHidden = true
@@ -163,7 +174,7 @@ class GameViewController: UIViewController {
     }
     
     func updatePlayerName() {
-        if playerTurnsCount < numberOfPlayers {
+        if playerTurnsCount < currentNumberOfPlayers + 1 {
             titleOfMessage.text = playerNames[playerTurnsCount] + "'s Turn"
             userImageView.image = playerImageArray[playerTurnsCount]
         } else {
@@ -174,11 +185,12 @@ class GameViewController: UIViewController {
     }
     
     func updatePoints(buttonOneSelected: Bool) {
-        if currentlySelectedPlayerIndex < 3 {
+        if currentlySelectedPlayerIndex < currentNumberOfPlayers {
             currentlySelectedPlayerIndex += 1
         } else {
             currentlySelectedPlayerIndex = 0
         }
+        playerTurnCount[currentlySelectedPlayerIndex] += 1
         if buttonOneSelected {
             //button one selected
             if pointsPerQuestion[index]["button1"] == 0 {
@@ -220,13 +232,71 @@ class GameViewController: UIViewController {
                 playerSpotsOnBoard[playerTurnsCount] = 0
             }
         }
-        if (playerTotalSpotsOnBoard[playerTurnsCount] >= sectionSpots[playerSection[currentlySelectedPlayerIndex]]) {
+        if (playerSpotsOnBoard[currentlySelectedPlayerIndex] >= sectionSpots[playerSection[currentlySelectedPlayerIndex]]) {
+            playerTurnCount[currentlySelectedPlayerIndex] = 0
             //player has reached the next level
             playerTotalSpotsOnBoard[playerTurnsCount] -= sectionSpots[playerSection[currentlySelectedPlayerIndex]];
             playerSection[currentlySelectedPlayerIndex] += 1
-            //don't show congrats for going from base level to level 1
+            isCongrats = true
+            if playerSection[currentlySelectedPlayerIndex] == 3 {
+                removePlayerFromGame()
+                //set that they have finished game
+                isCongrats = false
+            } else {
+                isCongrats = true
+            }
+            //issue where if it is the last player won't show score board bc of this and messes up whole game
+            if currentlySelectedPlayerIndex == 0 {
+                shouldShowScoreBoard = true
+            } else {
+                shouldShowScoreBoard = false
+            }
+            shouldShowRemovePlayer = false
             performSegue(withIdentifier: "showCongrats", sender: nil)
+        } else if playerTurnCount[currentlySelectedPlayerIndex] > sectionSpots[playerSection[currentlySelectedPlayerIndex]] {
+            //player has run out of turns let them know they are out and remove them
+            shouldShowRemovePlayer = true
+            isCongrats = false
+            performSegue(withIdentifier: "showCongrats", sender: nil)
+            removePlayerFromGame()
+        } else {
+            shouldShowRemovePlayer = false
         }
+    }
+    
+    
+    func removePlayerFromGame() {
+        if currentlySelectedPlayerIndex != 0 {
+            currentlySelectedPlayerIndex -= 1;
+        } else {
+            currentlySelectedPlayerIndex = 3;
+        }
+        //player has finished the game
+        currentNumberOfPlayers -= 1;
+        //add player to end of list then remove them from where they used to be
+        mentalPoints.append(mentalPoints[currentlySelectedPlayerIndex])
+        mentalPoints.remove(at: currentlySelectedPlayerIndex)
+        enviromentalPoints.append(enviromentalPoints[currentlySelectedPlayerIndex])
+        enviromentalPoints.remove(at: currentlySelectedPlayerIndex)
+        physicalPoints.append(physicalPoints[currentlySelectedPlayerIndex])
+        physicalPoints.remove(at: currentlySelectedPlayerIndex)
+        societalPoints.append(societalPoints[currentlySelectedPlayerIndex])
+        societalPoints.remove(at: currentlySelectedPlayerIndex)
+        moneyPoints.append(moneyPoints[currentlySelectedPlayerIndex])
+        moneyPoints.remove(at: currentlySelectedPlayerIndex)
+        playerSpotsOnBoard.append(playerSpotsOnBoard[currentlySelectedPlayerIndex])
+        playerSpotsOnBoard.remove(at: currentlySelectedPlayerIndex)
+        
+        //update original player names on new order
+        playerOriginalNames.append(playerNames[currentlySelectedPlayerIndex])
+        playerOriginalNames.remove(at: currentlySelectedPlayerIndex)
+        playerOriginalCategories.append(playerCategories[currentlySelectedPlayerIndex])
+        playerOriginalCategories.remove(at: currentlySelectedPlayerIndex)
+        playerOriginalImageArray.append(playerImageArray[currentlySelectedPlayerIndex])
+        playerOriginalImageArray.remove(at: currentlySelectedPlayerIndex)
+        playerNames.remove(at: currentlySelectedPlayerIndex)
+        playerSection.remove(at: currentlySelectedPlayerIndex)
+        playerCategories.remove(at: currentlySelectedPlayerIndex)
     }
     
     //MARK: Actions
@@ -240,5 +310,11 @@ class GameViewController: UIViewController {
         updatePoints(buttonOneSelected: false)
         playerTurnsCount += 1;
         updatePlayerName()
+    }
+}
+
+extension GameViewController: ScoreBoardDelegate {
+    func forceShowScoreBoard() {
+        performSegue(withIdentifier: "showScore", sender: nil)
     }
 }
