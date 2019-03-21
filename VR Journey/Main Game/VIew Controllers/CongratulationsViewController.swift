@@ -8,12 +8,20 @@
 
 import UIKit
 
+protocol ScoreBoardDelegate {
+    func forceShowScoreBoard()
+}
+
 class CongratulationsViewController: UIViewController {
     //MARK: Properties
     var sectionImages = [#imageLiteral(resourceName: "light"), #imageLiteral(resourceName: "205537"), #imageLiteral(resourceName: "factory"), #imageLiteral(resourceName: "globe"), #imageLiteral(resourceName: "winner")]
     var playerNames = ["","","",""]
     var currentUserIndex = 0;
     var currentUsersStageIndex = 0;
+    var isCongrats = true
+    var shouldShowScoreAfter = false
+    var shouldShowRemovePlayer = false
+    var delegate: ScoreBoardDelegate?
     
     //MARK: Outlets
     @IBOutlet var congratsLabel: UILabel!
@@ -21,12 +29,15 @@ class CongratulationsViewController: UIViewController {
     @IBOutlet var mainView: UIView!
     @IBOutlet var stageImageView: UIImageView!
     @IBOutlet var levelMessage: UILabel!
+    @IBOutlet var rolldiceLabel: UILabel!
     
     //MARK: Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
-        createParticles()
+        if !shouldShowRemovePlayer {
+            createParticles()
+        }
     }
     
     //MARK: Methods
@@ -66,20 +77,35 @@ class CongratulationsViewController: UIViewController {
     }
     
     func setUpUI() {
-        if currentUsersStageIndex > 3 {
-            //user has finished the game
+        if shouldShowRemovePlayer {
+            //removing player
+            levelMessage.text = "Sorry you didn't make it to the next section in time and have been removed."
+            congratsLabel.text = "You Lost"
+            stageImageView.image = #imageLiteral(resourceName: "sad")
+            rolldiceLabel.text = "To sabotage you can remove the last persons turn"
+            mainView.backgroundColor = #colorLiteral(red: 0.06274510175, green: 0, blue: 0.1921568662, alpha: 1)
+        } else if isCongrats {
+                levelMessage.text = "Congrats on making it to the next level!"
+                congratsLabel.text = "Congrats!"
+                stageImageView.image = #imageLiteral(resourceName: "dice")
+                rolldiceLabel.text = "Roll the Dice to Continue"
+                 mainView.backgroundColor = #colorLiteral(red: 0.3176470697, green: 0.07450980693, blue: 0.02745098062, alpha: 1)
+        } else {
+            //player reached end of game
             levelMessage.text = "Congrats on making it to the end of the game!"
             congratsLabel.text = "Congrats!"
-            stageImageView.image = sectionImages[4]
-        } else {
-            levelMessage.text = "Congrats on making it to level \(currentUsersStageIndex + 1)!"
-            congratsLabel.text = "Congrats!"
-            stageImageView.image = sectionImages[currentUsersStageIndex]
+            stageImageView.image = #imageLiteral(resourceName: "winner")
+            rolldiceLabel.text = "Roll the Dice to Continue"
+            mainView.backgroundColor = #colorLiteral(red: 0.3098039329, green: 0.01568627544, blue: 0.1294117719, alpha: 1)
         }
     }
     
     //MARK: Actions
     @IBAction func okayButtonPressed(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        if shouldShowScoreAfter {
+            dismiss(animated: true, completion: delegate?.forceShowScoreBoard)
+        } else {
+            dismiss(animated: true, completion: nil)
+        }
     }
 }
