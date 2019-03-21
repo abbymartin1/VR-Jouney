@@ -403,7 +403,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="5MI-ej-k05" firstAttribute="top" secondItem="uPf-73-XVP" secondAttribute="top" constant="200" id="15K-IU-K4J"/>
                             <constraint firstItem="5MI-ej-k05" firstAttribute="centerX" secondItem="0HS-dd-use" secondAttribute="centerX" id="6e7-7j-JsW"/>

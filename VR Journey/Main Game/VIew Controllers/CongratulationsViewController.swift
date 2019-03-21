@@ -82,23 +82,14 @@ class CongratulationsViewController: UIViewController {
             levelMessage.text = "Sorry you didn't make it to the next section in time and have been removed."
             congratsLabel.text = "You Lost"
             stageImageView.image = #imageLiteral(resourceName: "sad")
-            rolldiceLabel.text = "Better Luck Next Time!"
+            rolldiceLabel.text = "To sabotage you can remove the last persons turn"
             mainView.backgroundColor = #colorLiteral(red: 0.06274510175, green: 0, blue: 0.1921568662, alpha: 1)
         } else if isCongrats {
-            if currentUsersStageIndex > 3 {
-                //user has finished the game
-                levelMessage.text = "Congrats on making it to the end of the game!"
-                congratsLabel.text = "Congrats!"
-                stageImageView.image = sectionImages[4]
-                rolldiceLabel.text = "Roll the Dice to Continue"
-                 mainView.backgroundColor = #colorLiteral(red: 0.3098039329, green: 0.01568627544, blue: 0.1294117719, alpha: 1)
-            } else {
                 levelMessage.text = "Congrats on making it to the next level!"
                 congratsLabel.text = "Congrats!"
                 stageImageView.image = #imageLiteral(resourceName: "dice")
                 rolldiceLabel.text = "Roll the Dice to Continue"
                  mainView.backgroundColor = #colorLiteral(red: 0.3176470697, green: 0.07450980693, blue: 0.02745098062, alpha: 1)
-            }
         } else {
             //player reached end of game
             levelMessage.text = "Congrats on making it to the end of the game!"
