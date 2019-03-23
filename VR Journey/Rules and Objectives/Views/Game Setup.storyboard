@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Learning Objectives-->
+        <!--Onboarding-->
         <scene sceneID="6du-r4-DTj">
             <objects>
-                <viewController title="Learning Objectives" id="jUk-P4-49V" customClass="LearningObjectivesViewController" customModule="VR_Journey" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Onboarding" id="jUk-P4-49V" customClass="LearningObjectivesViewController" customModule="VR_Journey" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dCm-VZ-uMG">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,10 +99,10 @@
             </objects>
             <point key="canvasLocation" x="-820.68345323741005" y="-189.92805755395685"/>
         </scene>
-        <!--Persona Information-->
+        <!--Onboarding-->
         <scene sceneID="krY-57-ohJ">
             <objects>
-                <viewController title="Persona Information" id="b6r-fC-bJH" customClass="GameInfoViewController" customModule="VR_Journey" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Onboarding" id="b6r-fC-bJH" customClass="GameInfoViewController" customModule="VR_Journey" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6j3-v3-YMl">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -140,12 +140,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aTc-q5-kDf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-52.173913043478265" y="-190.17857142857142"/>
+            <point key="canvasLocation" x="-52" y="-190"/>
         </scene>
-        <!--Game Rules-->
+        <!--Onboarding-->
         <scene sceneID="Fj2-bE-Amm">
             <objects>
-                <viewController title="Game Rules" id="e5V-VH-8sS" customClass="MoreGameInfoViewController" customModule="VR_Journey" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Onboarding" id="e5V-VH-8sS" customClass="MoreGameInfoViewController" customModule="VR_Journey" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G1m-QT-jiY">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
