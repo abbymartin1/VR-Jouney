@@ -35,9 +35,7 @@ class CongratulationsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
-        if !shouldShowRemovePlayer {
-            createParticles()
-        }
+        createParticles()
     }
     
     //MARK: Methods
@@ -48,12 +46,19 @@ class CongratulationsViewController: UIViewController {
         particleEmitter.emitterShape = .line
         particleEmitter.emitterSize = CGSize(width: view.frame.size.width, height: 1)
         
-        let red = makeEmitterCell(color: UIColor.red)
-        let yellow = makeEmitterCell(color: UIColor.yellow)
-        let blue = makeEmitterCell(color: UIColor.blue)
-        let orange = makeEmitterCell(color: UIColor.orange)
-        
-        particleEmitter.emitterCells = [red, yellow, blue, orange]
+        if !shouldShowRemovePlayer {
+            let red = makeEmitterCell(color: UIColor.red)
+            let yellow = makeEmitterCell(color: UIColor.yellow)
+            let blue = makeEmitterCell(color: UIColor.blue)
+            let orange = makeEmitterCell(color: UIColor.orange)
+            particleEmitter.emitterCells = [red, yellow, blue, orange]
+        } else {
+            let lightBlue = makeEmitterCell(color: #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1))
+            let darkBlue = makeEmitterCell(color: #colorLiteral(red: 0.1215686277, green: 0.01176470611, blue: 0.4235294163, alpha: 1))
+            let blue = makeEmitterCell(color: #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1))
+            let mediumBlue = makeEmitterCell(color: #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1))
+            particleEmitter.emitterCells = [lightBlue, darkBlue, blue, mediumBlue]
+        }
         
         view.layer.addSublayer(particleEmitter)
     }
@@ -72,7 +77,11 @@ class CongratulationsViewController: UIViewController {
         cell.spinRange = 3
         cell.scaleRange = 0.5
         cell.scaleSpeed = -0.05
-        cell.contents = #imageLiteral(resourceName: "swirl-blue-md").cgImage
+        if !shouldShowRemovePlayer {
+            cell.contents = #imageLiteral(resourceName: "swirl-blue-md").cgImage
+        } else {
+            cell.contents = #imageLiteral(resourceName: "raindrop").cgImage
+        }
         return cell
     }
     
@@ -82,7 +91,7 @@ class CongratulationsViewController: UIViewController {
             levelMessage.text = "Sorry you didn't make it to the next section in time and have been removed."
             congratsLabel.text = "You Lost"
             stageImageView.image = #imageLiteral(resourceName: "sad")
-            rolldiceLabel.text = "To sabotage you can remove the last persons turn"
+            rolldiceLabel.text = "To sabotage the next person will have to skip their turn"
             mainView.backgroundColor = #colorLiteral(red: 0.06274510175, green: 0, blue: 0.1921568662, alpha: 1)
         } else if isCongrats {
                 levelMessage.text = "Congrats on making it to the next level!"

@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Learning Objectives-->
+        <!--Onboarding-->
         <scene sceneID="6du-r4-DTj">
             <objects>
-                <viewController title="Learning Objectives" id="jUk-P4-49V" customClass="LearningObjectivesViewController" customModule="VR_Journey" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Onboarding" id="jUk-P4-49V" customClass="LearningObjectivesViewController" customModule="VR_Journey" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dCm-VZ-uMG">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,11 +99,10 @@
             </objects>
             <point key="canvasLocation" x="-820.68345323741005" y="-189.92805755395685"/>
         </scene>
-        <!--Persona Information-->
+        <!--Onboarding-->
         <scene sceneID="krY-57-ohJ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aTc-q5-kDf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController title="Persona Information" id="b6r-fC-bJH" customClass="GameInfoViewController" customModule="VR_Journey" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Onboarding" id="b6r-fC-bJH" customClass="GameInfoViewController" customModule="VR_Journey" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6j3-v3-YMl">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -139,14 +138,14 @@
                         <viewLayoutGuide key="safeArea" id="puV-C3-c59"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aTc-q5-kDf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-52.173913043478265" y="-190.17857142857142"/>
+            <point key="canvasLocation" x="-52" y="-190"/>
         </scene>
-        <!--Game Rules-->
+        <!--Onboarding-->
         <scene sceneID="Fj2-bE-Amm">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tom-Bs-DNN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController title="Game Rules" id="e5V-VH-8sS" customClass="MoreGameInfoViewController" customModule="VR_Journey" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Onboarding" id="e5V-VH-8sS" customClass="MoreGameInfoViewController" customModule="VR_Journey" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G1m-QT-jiY">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -162,49 +161,31 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="XAg-Lq-h0M" kind="show" id="z7g-w2-K57"/>
+                                    <action selector="continueButtonPressed:" destination="e5V-VH-8sS" eventType="touchUpInside" id="DkM-cJ-UNt"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome3" translatesAutoresizingMaskIntoConstraints="NO" id="xvU-f0-Bx1">
                                 <rect key="frame" x="8" y="28" width="1096" height="738"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbO-r7-QwK">
-                                <rect key="frame" x="30" y="644" width="482" height="100"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="j7v-IK-kEF"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="j7v-IK-kEF"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="j7v-IK-kEF"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <segue destination="XAg-Lq-h0M" kind="show" id="ZCQ-gv-6np"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="qbO-r7-QwK" firstAttribute="leading" secondItem="IfJ-tl-MF1" secondAttribute="leading" constant="30" id="0Y1-Sv-ShN"/>
                             <constraint firstItem="IfJ-tl-MF1" firstAttribute="trailing" secondItem="xvU-f0-Bx1" secondAttribute="trailing" constant="8" id="HwU-qL-3RN"/>
                             <constraint firstItem="xvU-f0-Bx1" firstAttribute="top" secondItem="IfJ-tl-MF1" secondAttribute="top" constant="8" id="JAM-XQ-qQq"/>
-                            <constraint firstItem="IfJ-tl-MF1" firstAttribute="trailing" secondItem="qbO-r7-QwK" secondAttribute="trailing" constant="600" id="LtW-GX-Z6x"/>
                             <constraint firstItem="U76-fs-bht" firstAttribute="top" secondItem="xvU-f0-Bx1" secondAttribute="bottom" constant="8" id="O5V-Jh-hFc"/>
                             <constraint firstItem="IfJ-tl-MF1" firstAttribute="trailing" secondItem="U76-fs-bht" secondAttribute="trailing" constant="8" id="Wrl-bs-Qp0"/>
                             <constraint firstItem="IfJ-tl-MF1" firstAttribute="bottom" secondItem="U76-fs-bht" secondAttribute="bottom" constant="10" id="XXb-DU-eCk"/>
                             <constraint firstItem="xvU-f0-Bx1" firstAttribute="leading" secondItem="IfJ-tl-MF1" secondAttribute="leading" constant="8" id="dDf-Ux-xlO"/>
-                            <constraint firstItem="U76-fs-bht" firstAttribute="top" secondItem="qbO-r7-QwK" secondAttribute="bottom" constant="30" id="eIn-LX-uRC"/>
                             <constraint firstItem="U76-fs-bht" firstAttribute="leading" secondItem="IfJ-tl-MF1" secondAttribute="leading" constant="8" id="h8N-aH-Lff"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IfJ-tl-MF1"/>
                     </view>
+                    <connections>
+                        <outlet property="imageForQuestion" destination="xvU-f0-Bx1" id="cih-2m-VQF"/>
+                        <segue destination="XAg-Lq-h0M" kind="show" identifier="showMenu" id="Nre-fM-8MS"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tom-Bs-DNN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="725.7194244604317" y="-190.64748201438852"/>
         </scene>
@@ -220,9 +201,6 @@
     <resources>
         <image name="welcome1" width="1112" height="834"/>
         <image name="welcome2" width="1112" height="834"/>
-        <image name="welcome3" width="1112" height="834"/>
+        <image name="welcome3" width="1112" height="835"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="z7g-w2-K57"/>
-    </inferredMetricsTieBreakers>
 </document>

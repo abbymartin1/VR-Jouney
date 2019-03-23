@@ -22,6 +22,8 @@ class ScoreBoardPopoverViewController: UIViewController {
     var societalPoints = [0,0,0,0]
     var moneyPoints = [0,0,0,0]
     var spotsToMove = [0,0,0,0]
+    var hasShownDetailedInfo = false
+    var index = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +31,20 @@ class ScoreBoardPopoverViewController: UIViewController {
         playerScoresTableView.dataSource = self
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "showPointsDetails") {
+            let vc = segue.destination as! ChoicesInformationPopoverViewController
+            vc.index = index
+        }
+    }
+    
     @IBAction func continueButtonTapped(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        if hasShownDetailedInfo == false && index != 0 {
+            performSegue(withIdentifier: "showPointsDetails", sender: nil)
+            hasShownDetailedInfo = true
+        } else {
+            dismiss(animated: true, completion: nil)
+        }
     }
 }
 
