@@ -91,7 +91,7 @@ class CongratulationsViewController: UIViewController {
             levelMessage.text = "Sorry you didn't make it to the next section in time and have been removed."
             congratsLabel.text = "You Lost"
             stageImageView.image = #imageLiteral(resourceName: "sad")
-            rolldiceLabel.text = "To sabotage the next person will have to skip their turn"
+            rolldiceLabel.text = "Good luck next time!"
             mainView.backgroundColor = #colorLiteral(red: 0.06274510175, green: 0, blue: 0.1921568662, alpha: 1)
         } else if isCongrats {
                 levelMessage.text = "Congrats on making it to the next level!"
@@ -105,7 +105,7 @@ class CongratulationsViewController: UIViewController {
             congratsLabel.text = "Congrats!"
             stageImageView.image = #imageLiteral(resourceName: "winner")
             rolldiceLabel.text = "Roll the Dice to Continue"
-            mainView.backgroundColor = #colorLiteral(red: 0.3098039329, green: 0.01568627544, blue: 0.1294117719, alpha: 1)
+            mainView.backgroundColor = #colorLiteral(red: 0.4635351896, green: 0, blue: 0.4425114095, alpha: 1)
         }
     }
     
